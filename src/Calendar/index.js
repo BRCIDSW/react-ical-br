@@ -158,9 +158,7 @@ export default class Calendar extends Component {
 
     this.months = months;
   }
-  getDisabledDates(disabledDates) {
-    return disabledDates && disabledDates.map((date) => format(parse(date), 'YYYY-MM-DD'));
-  }
+
   _displayOptions = {};
   getDisplayOptions(displayOptions = this.props.displayOptions) {
     return Object.assign(this._displayOptions, defaultDisplayOptions, displayOptions);

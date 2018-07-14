@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import classNames from 'classnames';
 import {getDateString} from '../utils';
 import format from 'date-fns/format';
+import parse from 'date-fns/parse';
 import getDay from 'date-fns/get_day';
 import isSameYear from 'date-fns/is_same_year';
 import styles from './Month.scss';
@@ -54,7 +55,7 @@ export default class Month extends PureComponent {
 					minDate && date < _minDate ||
 					maxDate && date > _maxDate ||
 					disabledDays && disabledDays.length && disabledDays.indexOf(dow) !== -1 ||
-          disabledDates && (typeof disabledDates === 'function' ? disabledDates(date) : (
+          disabledDates && (typeof disabledDates === 'function' ? disabledDates(parse(date)) : (
             disabledDates.length && disabledDates.indexOf(date) !== -1)
           )
 				);
