@@ -54,7 +54,9 @@ export default class Month extends PureComponent {
 					minDate && date < _minDate ||
 					maxDate && date > _maxDate ||
 					disabledDays && disabledDays.length && disabledDays.indexOf(dow) !== -1 ||
-					disabledDates && disabledDates.length && disabledDates.indexOf(date) !== -1
+          disabledDates && (typeof disabledDates === 'function' ? disabledDates(date) : (
+            disabledDates.length && disabledDates.indexOf(date) !== -1)
+          )
 				);
 
         days[k] = (
@@ -88,7 +90,6 @@ export default class Month extends PureComponent {
           {days}
         </ul>
       );
-
     }
 
     return monthRows;

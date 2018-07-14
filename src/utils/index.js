@@ -6,7 +6,6 @@ import isBefore from 'date-fns/is_before';
 import isSameDay from 'date-fns/is_same_day';
 import endOfDay from 'date-fns/end_of_day';
 import startOfDay from 'date-fns/start_of_day';
-import parse from 'date-fns/parse';
 import {withPropsOnChange} from 'recompose';
 
 export const keyCodes = {
@@ -142,7 +141,7 @@ export function sanitizeDate(date, {
   // Selected date should not be disabled or outside the selectable range
   if (
     !date ||
-    disabledDates.some(disabledDate => isSameDay(disabledDate, date)) ||
+    typeof disabledDates === 'function' ? disabledDates(date) : disabledDates.some(disabledDate => isSameDay(disabledDate, date)) ||
     disabledDays && disabledDays.indexOf(getDay(date)) !== -1 ||
     minDate && isBefore(date, startOfDay(minDate)) ||
     maxDate && isAfter(date, endOfDay(maxDate))

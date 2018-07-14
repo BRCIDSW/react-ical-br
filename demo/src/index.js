@@ -7,5 +7,9 @@ import './demo.css';
 render(
   <InfiniteCalendar
     width={Math.min(window.innerWidth, 400)}
+    disabledDates={d => {
+
+      return false
+    }}
   />
 , document.querySelector('#demo'));
