@@ -1,6 +1,6 @@
 {
-    "name": "@appannie/react-infinite-calendar",
-    "version": "2.4.5",
+    "name": "@mo4islona/react-infinite-calendar",
+    "version": "2.4.6",
     "description": "Infinite scrolling date-picker built with React, with localization, themes, keyboard support, and more.",
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -8,7 +8,6 @@
         "css",
         "es",
         "lib",
-        "umd",
         "styles.css"
     ],
     "scripts": {
@@ -53,7 +52,7 @@
         "react": "^16.3.2",
         "react-dom": "^16.3.2"
     },
-    "homepage": "appannie/react-infinite-calendar",
+    "homepage": "mo4islona/react-infinite-calendar",
     "license": "MIT",
     "keywords": [
         "react",

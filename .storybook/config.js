@@ -3,7 +3,7 @@ import { setOptions } from '@kadira/storybook-addon-options';
 
 setOptions({
     name: 'INFINITE CALENDAR',
-    url: 'https://github.com/appannie/react-infinite-calendar',
+    url: 'https://github.com/mo4islona/react-infinite-calendar',
     goFullScreen: false,
     showLeftPanel: true,
     showDownPanel: false,
