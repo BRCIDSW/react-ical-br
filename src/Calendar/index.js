@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {debounce, emptyFn, range, ScrollSpeed} from '../utils';
-import {defaultProps} from 'recompose';
+import defaultProps from 'recompose/defaultProps';
 import defaultDisplayOptions from '../utils/defaultDisplayOptions';
 import defaultLocale from '../utils/defaultLocale';
 import defaultTheme from '../utils/defaultTheme';

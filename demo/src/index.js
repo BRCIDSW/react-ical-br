@@ -11,5 +11,8 @@ render(
 
       return false;
     }}
+    displayOptions={{
+      layout: 'landscape',
+    }}
   />
 , document.querySelector('#demo'));

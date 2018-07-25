@@ -4,7 +4,6 @@
   position: relative;
   display: table;
   z-index: 1;
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,6 +20,7 @@
       flex-grow: 1;
       overflow: hidden;
       z-index: 1;
+      background: red;
       border-top-right-radius: $borderRadius;
       border-bottom-right-radius: $borderRadius;
     }

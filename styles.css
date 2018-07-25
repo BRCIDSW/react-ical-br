@@ -19,6 +19,7 @@
       flex-grow: 1;
       overflow: hidden;
       z-index: 1;
+      background: red;
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px; }
 
@@ -300,6 +301,16 @@
   .Cal__Header__range .Cal__Header__wrapper .Cal__Header__date {
     white-space: nowrap;
     z-index: 1; }
+/*  imported from MonthList.scss  */
+
+.Cal__MonthList__root {
+  width: 100% !important;
+  background-color: #FFF;
+  -webkit-overflow-scrolling: touch; }
+  .Cal__MonthList__root.Cal__MonthList__scrolling > div {
+    pointer-events: none; }
+  .Cal__MonthList__root.Cal__MonthList__scrolling label {
+    opacity: 1; }
 /*  imported from Weekdays.scss  */
 
 .Cal__Weekdays__root {
@@ -317,16 +328,6 @@
   flex-grow: 1;
   font-weight: 500;
   text-align: center; }
-/*  imported from MonthList.scss  */
-
-.Cal__MonthList__root {
-  width: 100% !important;
-  background-color: #FFF;
-  -webkit-overflow-scrolling: touch; }
-  .Cal__MonthList__root.Cal__MonthList__scrolling > div {
-    pointer-events: none; }
-  .Cal__MonthList__root.Cal__MonthList__scrolling label {
-    opacity: 1; }
 /*
   imported from Years.scss 
  */

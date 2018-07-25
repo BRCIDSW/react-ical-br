@@ -1,7 +1,10 @@
-import {compose, withProps, withPropsOnChange, withState} from 'recompose';
+import withState from 'recompose/withState';
+import compose from 'recompose/compose';
+import withProps from 'recompose/withProps';
+import withPropsOnChange from 'recompose/withPropsOnChange';
 import classNames from 'classnames';
 import {withDefaultProps} from './';
-import {sanitizeDate, withImmutableProps} from '../utils';
+import { withImmutableProps } from '../utils';
 import isBefore from 'date-fns/is_before';
 import enhanceHeader from '../Header/withMultipleRanges';
 import format from 'date-fns/format';
