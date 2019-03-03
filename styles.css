@@ -4,7 +4,6 @@
   position: relative;
   display: table;
   z-index: 1;
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -182,6 +181,33 @@
   box-sizing: border-box; }
   .Cal__Day__range.Cal__Day__selected.Cal__Day__end .Cal__Day__selection .Cal__Day__day {
     top: 4px; }
+/*  imported from MonthList.scss  */
+
+.Cal__MonthList__root {
+  width: 100% !important;
+  background-color: #FFF;
+  -webkit-overflow-scrolling: touch; }
+  .Cal__MonthList__root.Cal__MonthList__scrolling > div {
+    pointer-events: none; }
+  .Cal__MonthList__root.Cal__MonthList__scrolling label {
+    opacity: 1; }
+/*  imported from Weekdays.scss  */
+
+.Cal__Weekdays__root {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.04); }
+
+.Cal__Weekdays__day {
+  padding: 15px 0;
+  flex-basis: 14.28571%;
+  flex-grow: 1;
+  font-weight: 500;
+  text-align: center; }
 /*  imported from Today.scss  */
 
 .Cal__Today__root {
@@ -301,33 +327,6 @@
   .Cal__Header__range .Cal__Header__wrapper .Cal__Header__date {
     white-space: nowrap;
     z-index: 1; }
-/*  imported from MonthList.scss  */
-
-.Cal__MonthList__root {
-  width: 100% !important;
-  background-color: #FFF;
-  -webkit-overflow-scrolling: touch; }
-  .Cal__MonthList__root.Cal__MonthList__scrolling > div {
-    pointer-events: none; }
-  .Cal__MonthList__root.Cal__MonthList__scrolling label {
-    opacity: 1; }
-/*  imported from Weekdays.scss  */
-
-.Cal__Weekdays__root {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.04); }
-
-.Cal__Weekdays__day {
-  padding: 15px 0;
-  flex-basis: 14.28571%;
-  flex-grow: 1;
-  font-weight: 500;
-  text-align: center; }
 /*
   imported from Years.scss 
  */
