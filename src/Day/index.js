@@ -53,7 +53,7 @@ export default class Day extends PureComponent {
       isToday,
       isSelected,
       monthShort,
-      theme: {selectionColor, todayColor},
+      theme: {selectionColor, textColor, todayColor},
       year,
     } = this.props;
     let color;
@@ -64,6 +64,11 @@ export default class Day extends PureComponent {
         : selectionColor;
     } else if (isToday) {
       color = todayColor;
+    }
+    else if(textColor) {
+      color = this.textColorDefault = typeof textColor.default === 'function'
+        ? textColor.default(date) 
+        : textColor.default;
     }
 
     return (
