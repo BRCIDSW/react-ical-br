@@ -1,0 +1,11 @@
+/coverage
+.storybook
+/demo
+/examples
+/node_modules
+/src
+/umd
+/.out
+npm-debug.log*
+CONTRIBUTING.md
+package-lock.json
