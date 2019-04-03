@@ -24,18 +24,39 @@
 
 
 
+
+$rangeHorzLineOffset : -4px;
+
+
 @mixin rangeOpen($size) {
   content: '';
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: $size - 4px;
-  height: $size - 4px;
-  margin-top: -0.5 * ($size - 4px);
-  margin-left: -0.5 * ($size - 4px);
+  left: 0%;
+  width: $size;
+  height: ($size + $rangeHorzLineOffset + $rangeHorzLineOffset);
+  margin-top: -0.5 * ($size + $rangeHorzLineOffset);
+  margin-left: 0;
   border-left: 4px solid black;
   border-top: 4px solid black;
   border-bottom: 4px solid black;
+  border-right: hidden;
+}
+
+@mixin rangeMiddle($size) {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: $size;
+  height: ($size + $rangeHorzLineOffset + $rangeHorzLineOffset);
+  margin-top: -0.5 * ($size + $rangeHorzLineOffset);
+  margin-left: 0;
+
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  border-right : hidden !important;
+  border-left : hidden !important;
 }
 
 
@@ -44,25 +65,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: $size - 4px;
-  height: $size - 4px;
-  margin-top: -0.5 * ($size - 4px);
-  margin-left: -0.5 * ($size - 4px);
+  width: $size;
+  height: ($size + $rangeHorzLineOffset + $rangeHorzLineOffset);
+  margin-top: -0.5 * ($size + $rangeHorzLineOffset);
+  margin-left: 0;
+
   border-right: 4px solid black;
   border-top: 4px solid black;
   border-bottom: 4px solid black;
+  border-left : hidden;
 }
-
-@mixin rangeMiddle($size) {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: $size - 4px;
-  height: $size - 4px;
-  margin-top: -0.5 * ($size - 4px);
-  margin-left: -0.5 * ($size - 4px);
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
-}
-
