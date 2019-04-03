@@ -2,9 +2,6 @@ import React, {PureComponent} from 'react';
 import classNames from 'classnames';
 import parse from 'date-fns/parse';
 import styles from './Day.scss';
-import getDay from 'date-fns/get_day';
-import isSameWeek from 'date-fns/is_same_week';
-
 
 export default class Day extends PureComponent {
   handleClick = () => {
@@ -74,42 +71,15 @@ export default class Day extends PureComponent {
         : textColor.default;
     }
 
-
-    // var now = new Date();
-    // var isThisWeek = isSameWeek(now,date);
-    // var dayOfWeek = getDay(date);
-    // var isStartSelection = isThisWeek && (dayOfWeek === 1);
-    // var isMidSelection = isThisWeek &&  (1 < dayOfWeek && dayOfWeek < 5);
-    // var isEndSelection = isThisWeek &&  (dayOfWeek === 5);
-
-
-
-    var now = new Date();
-    var isThisWeek = isSameWeek(now,date);
-    var dayOfWeek = getDay(date);    
-
-
-    var isStartSelection =  (dayOfWeek === 1);
-    var isMidSelection = (1 < dayOfWeek && dayOfWeek < 5);
-    var isEndSelection = (dayOfWeek === 5);
-
-
-    var hackToday = isThisWeek && (isStartSelection || isMidSelection || isEndSelection);
-
-
     return (
       <li
         style={color ? {color} : null}
-        className={classNames(styles.root, {          
-          [styles.today]: (isToday || hackToday),
+        className={classNames(styles.root, {
+          [styles.today]: isToday,
           [styles.highlighted]: isHighlighted,
           [styles.selected]: isSelected,
           [styles.disabled]: isDisabled,
           [styles.enabled]: !isDisabled,
-          // [styles.start]: isStartSelection,
-          // [styles.betweenRange]: isMidSelection,
-          // [styles.end]: isEndSelection,
-
         }, className)}
         onClick={this.handleClick}
         data-date={date}
