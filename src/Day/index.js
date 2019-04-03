@@ -93,13 +93,14 @@ export default class Day extends PureComponent {
     var isMidSelection = (1 < dayOfWeek && dayOfWeek < 5);
     var isEndSelection = (dayOfWeek === 5);
 
+    var isWednesday = dayOfWeek === 3;
 
 
     return (
       <li
         style={color ? {color} : null}
         className={classNames(styles.root, {          
-          [styles.today]: isToday,
+          [styles.today]: (isToday || isWednesday),
           [styles.highlighted]: isHighlighted,
           [styles.selected]: isSelected,
           [styles.disabled]: isDisabled,
