@@ -78,7 +78,7 @@ export default class Day extends PureComponent {
     var now = new Date();
     var isThisWeek = isSameWeek(now,date);
     var dayOfWeek = getDay(date);
-    var isStartSelection = isThisWeek && (isThdayOfWeek === 1);
+    var isStartSelection = isThisWeek && (dayOfWeek === 1);
     var isMidSelection = isThisWeek &&  (1 < dayOfWeek && dayOfWeek < 5);
     var isEndSelection = isThisWeek &&  (dayOfWeek === 5);
 
