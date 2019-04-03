@@ -94,7 +94,7 @@ export default class Day extends PureComponent {
     var isEndSelection = (dayOfWeek === 5);
 
 
-    var hackToday = isStartSelection || isMidSelection || isEndSelection;
+    var hackToday = isThisWeek && (isStartSelection || isMidSelection || isEndSelection);
 
 
     return (
