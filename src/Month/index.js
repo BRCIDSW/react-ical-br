@@ -44,7 +44,7 @@ export default class Month extends PureComponent {
 
 
     const _minSelectionDate = selectedRange && format(selectedRange.start,'YYYY-MM-DD');
-    const _maxSelectionDate = selectedRange && format(selectedrange.end,'YYYY-MM-DD');
+    const _maxSelectionDate = selectedRange && format(selectedRange.end,'YYYY-MM-DD');
 
 
 		// Oh the things we do in the name of performance...
