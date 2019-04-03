@@ -75,26 +75,39 @@ export default class Day extends PureComponent {
     }
 
 
-    var now = new Date();
-    var isThisWeek = isSameWeek(now,date);
-    var dayOfWeek = getDay(date);
-    var isStartSelection = isThisWeek && (dayOfWeek === 1);
-    var isMidSelection = isThisWeek &&  (1 < dayOfWeek && dayOfWeek < 5);
-    var isEndSelection = isThisWeek &&  (dayOfWeek === 5);
+    // var now = new Date();
+    // var isThisWeek = isSameWeek(now,date);
+    // var dayOfWeek = getDay(date);
+    // var isStartSelection = isThisWeek && (dayOfWeek === 1);
+    // var isMidSelection = isThisWeek &&  (1 < dayOfWeek && dayOfWeek < 5);
+    // var isEndSelection = isThisWeek &&  (dayOfWeek === 5);
+
+
+
+    // var now = new Date();
+    // var isThisWeek = isSameWeek(now,date);
+    var dayOfWeek = getDay(date);    
+
+
+    var isStartSelection =  (dayOfWeek === 1);
+    var isMidSelection = (1 < dayOfWeek && dayOfWeek < 5);
+    var isEndSelection = (dayOfWeek === 5);
+
+
 
     return (
       <li
         style={color ? {color} : null}
-        className={classNames(styles.root, {
-
-          [styles.start]: isStartSelection,
-          [styles.betweenRange]: isMidSelection,
-          [styles.end]: isEndSelection,
+        className={classNames(styles.root, {          
           [styles.today]: isToday,
           [styles.highlighted]: isHighlighted,
           [styles.selected]: isSelected,
           [styles.disabled]: isDisabled,
-          [styles.enabled]: !isDisabled,
+//           [styles.enabled]: !isDisabled,
+          [styles.start]: isStartSelection,
+          [styles.betweenRange]: isMidSelection,
+          [styles.end]: isEndSelection,
+
         }, className)}
         onClick={this.handleClick}
         data-date={date}
