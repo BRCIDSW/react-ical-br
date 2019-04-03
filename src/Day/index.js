@@ -84,8 +84,8 @@ export default class Day extends PureComponent {
 
 
 
-    // var now = new Date();
-    // var isThisWeek = isSameWeek(now,date);
+    var now = new Date();
+    var isThisWeek = isSameWeek(now,date);
     var dayOfWeek = getDay(date);    
 
 
@@ -93,21 +93,22 @@ export default class Day extends PureComponent {
     var isMidSelection = (1 < dayOfWeek && dayOfWeek < 5);
     var isEndSelection = (dayOfWeek === 5);
 
-//    var isWednesday = dayOfWeek === 3;
+
+    var hackToday = isStartSelection || isMidSelection || isEndSelection;
 
 
     return (
       <li
         style={color ? {color} : null}
         className={classNames(styles.root, {          
-          [styles.today]: (isToday),
+          [styles.today]: (isToday || hackToday),
           [styles.highlighted]: isHighlighted,
           [styles.selected]: isSelected,
           [styles.disabled]: isDisabled,
           [styles.enabled]: !isDisabled,
-          [styles.start]: isStartSelection,
-          [styles.betweenRange]: isMidSelection,
-          [styles.end]: isEndSelection,
+          // [styles.start]: isStartSelection,
+          // [styles.betweenRange]: isMidSelection,
+          // [styles.end]: isEndSelection,
 
         }, className)}
         onClick={this.handleClick}
