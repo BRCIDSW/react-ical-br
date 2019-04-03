@@ -28,6 +28,7 @@ export type DateColorFunction = (date: Date) => string | undefined;
 
 export interface ReactInfiniteCalendarProps {
     selected?: DateType | false | { start: DateType; end: DateType };
+    selectedRange?: { start: DateType; end: DateType };                         // BR/OPF support for week selection
     width?: number | 'auto' | '100%';
     height?: number | 'auto';
     min?: DateType;
@@ -68,8 +69,8 @@ export interface ReactInfiniteCalendarProps {
         headerColor?: string;
         selectionColor?: string;
         textColor?: {
-            active?: DateColorFunction | string;
-            default?: DateColorFunction |  string;
+            active?: DateColorFunction | string;                    // BR/OPF support day-shading
+            default?: DateColorFunction |  string;                  // BR/OPF support day-shading
         };
         todayColor?: string;
         weekdayColor?: string;

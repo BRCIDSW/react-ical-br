@@ -128,6 +128,7 @@ export default class MonthList extends Component {
       passThrough,
       rowHeight,
       selected,
+      selectedRange,      // BR/OPF
       showOverlay,
       theme,
       today,
@@ -141,6 +142,7 @@ export default class MonthList extends Component {
       <Month
         key={key}
         selected={selected}
+        selectedRange={selectedRange}
         DayComponent={DayComponent}
         monthDate={date}
         disabledDates={disabledDates}

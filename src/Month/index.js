@@ -20,6 +20,7 @@ export default class Month extends PureComponent {
       rowHeight,
       rows,
       selected,
+      selectedRange,    // BR/OPF
       today,
       theme,
       passThrough,
@@ -33,11 +34,18 @@ export default class Month extends PureComponent {
     let isDisabled = false;
     let isToday = false;
     let date, days, dow, row;
+    let inSelectionRange = false;
 
     // Used for faster comparisons
     const _today = format(today, 'YYYY-MM-DD');
     const _minDate = format(minDate, 'YYYY-MM-DD');
     const _maxDate = format(maxDate, 'YYYY-MM-DD');
+
+
+
+    const _minSelectionDate = selectedRange && format(selectedRange.start,'YYYY-MM-DD');
+    const _maxSelectionDate = selectedRange && format(selectedrange.end,'YYYY-MM-DD');
+
 
 		// Oh the things we do in the name of performance...
     for (let i = 0, len = rows.length; i < len; i++) {
@@ -60,6 +68,9 @@ export default class Month extends PureComponent {
           )
 				);
 
+        inSelectionRange = _minSelectionDate && (_minSelectionDate <= date && date <= _maxSelectionDate); 
+
+
         days[k] = (
 					<DayComponent
 						key={`day-${day}`}
@@ -67,6 +78,7 @@ export default class Month extends PureComponent {
 						date={date}
 						day={day}
             selected={selected}
+            inSelectionRange={inSelectionRange}
 						isDisabled={isDisabled}
 						isToday={isToday}
 						locale={locale}

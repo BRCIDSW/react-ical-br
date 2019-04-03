@@ -104,7 +104,7 @@ export default class Calendar extends Component {
       selectionColor: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       textColor: PropTypes.shape({
         active: PropTypes.string,
-        default: PropTypes.string,
+        default: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       }),
       todayColor: PropTypes.string,
       weekdayColor: PropTypes.string,
@@ -274,6 +274,7 @@ export default class Calendar extends Component {
       rowHeight,
       scrollDate,
       selected,
+      selectedRange,
 			tabIndex,
 			width,
       YearsComponent,

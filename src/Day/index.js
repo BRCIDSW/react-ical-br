@@ -48,6 +48,7 @@ export default class Day extends PureComponent {
       date,
       day,
       handlers,
+      inSelectionRange,
       isDisabled,
       isHighlighted,
       isToday,
@@ -75,7 +76,7 @@ export default class Day extends PureComponent {
       <li
         style={color ? {color} : null}
         className={classNames(styles.root, {
-          [styles.today]: isToday,
+          [styles.today]: (isToday || inSelectionRange),
           [styles.highlighted]: isHighlighted,
           [styles.selected]: isSelected,
           [styles.disabled]: isDisabled,
