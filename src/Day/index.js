@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import parse from 'date-fns/parse';
 import styles from './Day.scss';
 import getDay from 'date-fns/get_day';
-import isSameWeek from 'date-fns/isSameWeek'
+import isSameWeek from 'date-fns/is_same_week';
 
 
 export default class Day extends PureComponent {
