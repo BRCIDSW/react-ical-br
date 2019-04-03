@@ -359,6 +359,7 @@ export default class Calendar extends Component {
               today={today}
               rowHeight={rowHeight}
               selected={selected}
+              selectedRange={selectedRange}
               scrollDate={scrollDate}
               showOverlay={showOverlay}
               width={width}
