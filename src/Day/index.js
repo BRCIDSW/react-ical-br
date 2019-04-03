@@ -100,11 +100,11 @@ export default class Day extends PureComponent {
       <li
         style={color ? {color} : null}
         className={classNames(styles.root, {          
-//          [styles.today]: (isToday || isWednesday),
-//          [styles.highlighted]: isHighlighted,
-//          [styles.selected]: isSelected,
-//          [styles.disabled]: isDisabled,
-//           [styles.enabled]: !isDisabled,
+          [styles.today]: (isToday || isWednesday),
+          [styles.highlighted]: isHighlighted,
+          [styles.selected]: isSelected,
+          [styles.disabled]: isDisabled,
+          [styles.enabled]: !isDisabled,
           [styles.start]: isStartSelection,
           [styles.betweenRange]: isMidSelection,
           [styles.end]: isEndSelection,
