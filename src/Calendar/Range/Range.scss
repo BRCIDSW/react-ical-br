@@ -13,6 +13,8 @@
 @mixin square($size) {
   content: '';
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: $size - 4px;
   height: $size - 4px;
   margin-top: -0.5 * ($size - 4px);
