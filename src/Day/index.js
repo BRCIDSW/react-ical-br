@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import classNames from 'classnames';
 import parse from 'date-fns/parse';
-import dayOfWeek from 'date-fns/last_day_of_week'
+import getDay from 'date-fns/get_day'
 import styles from './Day.scss';
 
 export default class Day extends PureComponent {
@@ -73,7 +73,7 @@ export default class Day extends PureComponent {
         : textColor.default;
     }
 
-    var dayOfWeek = dayOfWeek(date);
+    var dayOfWeek = getDay(date);
     var isSelectionStart = inSelectionRange &&  dayOfWeek === 1;
     var isSelectionMiddle = inSelectionRange &&  (1 < dayOfWeek && dayOfWeek < 5 );
     var isSelectionEnd = inSelectionRange && dayOfWeek === 5;
