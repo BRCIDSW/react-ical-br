@@ -93,6 +93,81 @@
     color: $textColorDisabled;
     cursor: not-allowed;
   }
+
+  &.rangeOpen {
+    position: relative;
+    z-index: 3;
+
+    > span {
+        color: darkorange;
+    }
+
+    &.disabled > span {
+        color: $textColorDisabled;
+    }
+
+    &:before {
+        @include rangeOpen($rowHeight);
+        box-shadow: inset 0 0 0 1px;
+        z-index: -1;
+    }
+
+    &.disabled:before {
+        box-shadow: inset 0 0 0 1px #BBB;
+    }
+
+  }
+
+  &.rangeClose {
+    position: relative;
+    z-index: 3;
+
+    > span {
+        color: purple;
+    }
+
+    &.disabled > span {
+        color: $textColorDisabled;
+    }
+
+    &:before {
+        @include rangeClose($rowHeight);
+        box-shadow: inset 0 0 0 1px;
+        z-index: -1;
+    }
+
+    &.disabled:before {
+        box-shadow: inset 0 0 0 1px #BBB;
+    }
+
+  }
+
+  &.rangeMiddle {
+    position: relative;
+    z-index: 3;
+
+    > span {
+        color: rgb(16, 108, 212);
+    }
+
+    &.disabled > span {
+        color: $textColorDisabled;
+    }
+
+    &:before {
+        @include rangeMiddle($rowHeight);
+        box-shadow: inset 0 0 0 1px;
+        z-index: -1;
+    }
+
+    &.disabled:before {
+        box-shadow: inset 0 0 0 1px #BBB;
+    }
+
+  }
+
+
+
 }
 
 .month, .year {

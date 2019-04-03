@@ -19,5 +19,50 @@
   height: $size - 4px;
   margin-top: -0.5 * ($size - 4px);
   margin-left: -0.5 * ($size - 4px);
-  border-radius: 1%;
+  border-radius: 0%;
 }
+
+
+
+@mixin rangeOpen($size) {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $size - 4px;
+  height: $size - 4px;
+  margin-top: -0.5 * ($size - 4px);
+  margin-left: -0.5 * ($size - 4px);
+  border-left: 4px solid black;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+
+@mixin rangeClose($size) {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $size - 4px;
+  height: $size - 4px;
+  margin-top: -0.5 * ($size - 4px);
+  margin-left: -0.5 * ($size - 4px);
+  border-right: 4px solid black;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+@mixin rangeMiddle($size) {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $size - 4px;
+  height: $size - 4px;
+  margin-top: -0.5 * ($size - 4px);
+  margin-left: -0.5 * ($size - 4px);
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+

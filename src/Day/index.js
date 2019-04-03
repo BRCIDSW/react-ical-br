@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import classNames from 'classnames';
 import parse from 'date-fns/parse';
+import dayOfWeek from 'date-fns/last_day_of_week'
 import styles from './Day.scss';
 
 export default class Day extends PureComponent {
@@ -72,15 +73,24 @@ export default class Day extends PureComponent {
         : textColor.default;
     }
 
+    var dayOfWeek = dayOfWeek(date);
+    var isSelectionStart = inSelectionRange &&  dayOfWeek === 1;
+    var isSelectionMiddle = inSelectionRange &&  (1 < dayOfWeek && dayOfWeek < 5 );
+    var isSelectionEnd = inSelectionRange && dayOfWeek === 5;
+
+
     return (
       <li
         style={color ? {color} : null}
         className={classNames(styles.root, {
-          [styles.today]: (isToday || inSelectionRange),
+          [styles.today]: (isToday || !inSelectionRange),
           [styles.highlighted]: isHighlighted,
           [styles.selected]: isSelected,
           [styles.disabled]: isDisabled,
           [styles.enabled]: !isDisabled,
+          [styles.rangeOpen]: isSelectionStart,
+          [styles.rangeMiddle]: isSelectionMiddle,
+          [styles.rangeClose]: isSelectionEnd
         }, className)}
         onClick={this.handleClick}
         data-date={date}
