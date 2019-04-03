@@ -28,14 +28,14 @@
 $rangeHorzLineOffset : -4px;
 
 
-@mixin rangeOpen($size) {
+@mixin rangeOpen($width,$height) {
   content: '';
   position: absolute;
   top: 50%;
   left: 0%;
-  width: $size;
-  height: ($size + $rangeHorzLineOffset + $rangeHorzLineOffset);
-  margin-top: -0.5 * ($size + $rangeHorzLineOffset);
+  width: $width;
+  height: ($height + $rangeHorzLineOffset + $rangeHorzLineOffset);
+  margin-top: -0.5 * ($height + $rangeHorzLineOffset);
   margin-left: 0;
   border-left: 4px solid black;
   border-top: 4px solid black;
@@ -43,15 +43,15 @@ $rangeHorzLineOffset : -4px;
   border-right: hidden;
 }
 
-@mixin rangeMiddle($size) {
+@mixin rangeMiddle($width,$height) {
   content: '';
   position: absolute;
   top: 50%;
   left: 0%;
-  width: $size + 16px;
-  height: ($size + $rangeHorzLineOffset + $rangeHorzLineOffset);
-  margin-top: -0.5 * ($size + $rangeHorzLineOffset);
-  margin-left: -8px;
+  width: $width;
+  height: ($height + $rangeHorzLineOffset + $rangeHorzLineOffset);
+  margin-top: -0.5 * ($height + $rangeHorzLineOffset);
+  margin-left: 0;
 
   border-top: 4px solid black;
   border-bottom: 4px solid black;
@@ -65,9 +65,9 @@ $rangeHorzLineOffset : -4px;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: $size;
-  height: ($size + $rangeHorzLineOffset + $rangeHorzLineOffset);
-  margin-top: -0.5 * ($size + $rangeHorzLineOffset);
+  width: $width;
+  height: ($height + $rangeHorzLineOffset + $rangeHorzLineOffset);
+  margin-top: -0.5 * ($height + $rangeHorzLineOffset);
   margin-left: 0;
 
   border-right: 4px solid black;
