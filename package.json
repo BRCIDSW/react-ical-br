@@ -1,6 +1,6 @@
 {
   "name": "react-ical-br",
-  "version": "0.5.35-0",
+  "version": "0.5.36-0",
   "description": "Infinite scrolling date-picker built with React, with localization, themes, keyboard support, and more.",
   "main": "lib/index.js",
   "module": "es/index.js",
