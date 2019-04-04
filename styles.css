@@ -117,8 +117,13 @@
     .Cal__Day__root.Cal__Day__rangeOpen.Cal__Day__disabled > span {
       color: #AAA; }
     .Cal__Day__root.Cal__Day__rangeOpen:before {
-      content: '';
       position: absolute;
+      margin: 0px;
+      padding: 0px;
+      top: 0px;
+      left: 0px;
+      width: auto;
+      height: auto;
       border-left: 4px solid black;
       border-top: 4px solid black;
       border-bottom: 4px solid black;
@@ -137,6 +142,13 @@
     .Cal__Day__root.Cal__Day__rangeClose:before {
       content: '';
       position: absolute;
+      position: absolute;
+      margin: 0px;
+      padding: 0px;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
       border-right: 4px solid black;
       border-top: 4px solid black;
       border-bottom: 4px solid black;
@@ -153,8 +165,13 @@
     .Cal__Day__root.Cal__Day__rangeMiddle.Cal__Day__disabled > span {
       color: #AAA; }
     .Cal__Day__root.Cal__Day__rangeMiddle:before {
-      content: '';
       position: absolute;
+      margin: 0px;
+      padding: 0px;
+      top: 0px;
+      left: 0px;
+      width: auto;
+      height: auto;
       border-top: 4px solid black;
       border-bottom: 4px solid black;
       border-right: hidden !important;
