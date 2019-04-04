@@ -98,9 +98,9 @@ export default class Day extends PureComponent {
           // [styles.disabled]: isDisabled,
           // [styles.enabled]: !isDisabled,
         
-          //  [styles.rangeOpen]: isSelectionStart,
+          [styles.rangeOpen]: isSelectionStart,
           [styles.rangeMiddle]: isSelectionMiddle,
-          // [styles.rangeClose]: isSelectionEnd
+          [styles.rangeClose]: isSelectionEnd
         }, className)}
         onClick={this.handleClick}
         data-date={date}
