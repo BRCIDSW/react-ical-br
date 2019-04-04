@@ -51,6 +51,7 @@
       height: 56px;
       border-radius: 0%;
       border: 3px solid red;
+      margin: 0 !important;
       background-color: #EFEFEF;
       z-index: -1; }
   .Cal__Day__root.Cal__Day__enabled:hover:before {
