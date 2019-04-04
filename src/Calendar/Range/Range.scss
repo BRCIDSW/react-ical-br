@@ -2,6 +2,7 @@
 $rangeHorzLineOffset : -4px;
 $weekSelectorThickness : 2px;
 $weekSelectorColor : darkgray;
+$weekSelectorHeight : 60%;
 
 
 
@@ -70,33 +71,23 @@ $weekSelectorColor : darkgray;
 
 @mixin rangeMiddle($size) {
 
-  @include squareborder($weekSelectorColor);
+  // @include squareborder($weekSelectorColor);
 
-  // content: '';
-  // position: absolute;
-  // top: 50%;
-  // left: 0%;
-  // width: 14%;
-  // height: ($height + $rangeHorzLineOffset + $rangeHorzLineOffset);
-  // margin-top: -0.5 * ($height + $rangeHorzLineOffset);
-  // margin-left: 0;
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
 
-  // position: absolute;
-  // margin: 0px;
-  // padding: 0px;
-  // top: 0px;
-  // left: 0px;
+  border-top: $weekSelectorThickness solid $color;
+  border-bottom: $weekSelectorThickness solid $color;;
+  border-right : hidden !important;
+  border-left : hidden !important;
 
-  // width: auto;
-  // height: auto;
+  margin : 0 !important;
 
-
-
-
-  // border-top: 4px solid black;
-  // border-bottom: 4px solid black;
-  // border-right : hidden !important;
-  // border-left : hidden !important;
 }
 
 
