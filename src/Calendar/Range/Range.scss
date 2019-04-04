@@ -1,7 +1,7 @@
 
 $rangeHorzLineOffset : -4px;
 $weekSelectorThickness : 2px;
-$weekSelectorColor : darkgray ;
+$weekSelectorColor : darkgray;
 
 
 
@@ -29,28 +29,8 @@ $weekSelectorColor : darkgray ;
   border-radius: 0%;
 }
 
-
-
-
-@mixin rangeOpen($size) {
-
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  border-radius: 25%;
-
-  border-top: $weekSelectorThickness solid $weekSelectorColor;
-  border-bottom: $weekSelectorThickness solid $weekSelectorColor;
-  border-right : hidden !important;
-  border-left : $weekSelectorThickness solid $weekSelectorColor;
-  margin : 0 !important;
-}
-
-@mixin rangeMiddle($size) {
-
+@mixin squareborder( $color : black )
+{
   content: '';
   position: absolute;
   top: 0px;
@@ -68,6 +48,58 @@ $weekSelectorColor : darkgray ;
 }
 
 
+
+
+
+@mixin rangeOpen($size) {
+
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+
+  border-top: $weekSelectorThickness solid $weekSelectorColor;
+  border-bottom: $weekSelectorThickness solid $weekSelectorColor;
+  border-right : hidden !important;
+  border-left : $weekSelectorThickness solid $weekSelectorColor;
+  margin : 0 !important;
+}
+
+@mixin rangeMiddle($size) {
+
+  @include squareborder($weekSelectorColor);
+
+  // content: '';
+  // position: absolute;
+  // top: 50%;
+  // left: 0%;
+  // width: 14%;
+  // height: ($height + $rangeHorzLineOffset + $rangeHorzLineOffset);
+  // margin-top: -0.5 * ($height + $rangeHorzLineOffset);
+  // margin-left: 0;
+
+  // position: absolute;
+  // margin: 0px;
+  // padding: 0px;
+  // top: 0px;
+  // left: 0px;
+
+  // width: auto;
+  // height: auto;
+
+
+
+
+  // border-top: 4px solid black;
+  // border-bottom: 4px solid black;
+  // border-right : hidden !important;
+  // border-left : hidden !important;
+}
+
+
 @mixin rangeClose($size) {
 
   content: '';
@@ -76,7 +108,7 @@ $weekSelectorColor : darkgray ;
   left: 0px;
   width: 100%;
   height: 100%;
-  border-radius: 25%;
+  border-radius: 0%;
 
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
