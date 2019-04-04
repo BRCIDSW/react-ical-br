@@ -3,7 +3,7 @@ $rangeHorzLineOffset : -4px;
 $weekSelectorThickness : 2px;
 $weekSelectorColor : darkgray;
 $weekSelectorHeight : 60%;
-
+$weekSelectorHeightMargin : 20%;
 
 
 @mixin circle($size) {
@@ -37,7 +37,7 @@ $weekSelectorHeight : 60%;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: $weekSelectorHeight !important;
   border-radius: 0%;
 
   border-top: $weekSelectorThickness solid $color;
@@ -46,6 +46,7 @@ $weekSelectorHeight : 60%;
   border-left : hidden !important;
 
   margin : 0 !important;
+  margin-top : $weekSelectorHeightMargin !important;
 }
 
 
