@@ -92,7 +92,7 @@ export default class Day extends PureComponent {
           [styles.enabled]: !isDisabled,
         
           //  [styles.rangeOpen]: isSelectionStart,
-        //  [styles.rangeMiddle]: isSelectionMiddle,
+          [styles.rangeMiddle]: isSelectionMiddle,
           // [styles.rangeClose]: isSelectionEnd
         }, className)}
         onClick={this.handleClick}
