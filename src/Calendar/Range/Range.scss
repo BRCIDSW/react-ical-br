@@ -52,7 +52,7 @@ $weekSelectorHeight : 60%;
 
 
 
-@mixin rangeOpen($size) {
+@mixin rangeOpen {
 
   content: '';
   position: absolute;
@@ -69,7 +69,7 @@ $weekSelectorHeight : 60%;
   margin : 0 !important;
 }
 
-@mixin rangeMiddle($size) {
+@mixin rangeMiddle {
 
   // @include squareborder($weekSelectorColor);
 
@@ -91,7 +91,7 @@ $weekSelectorHeight : 60%;
 }
 
 
-@mixin rangeClose($size) {
+@mixin rangeClose {
 
   content: '';
   position: absolute;
