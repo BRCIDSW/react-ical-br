@@ -83,18 +83,16 @@ export default class Day extends PureComponent {
       <li
         style={color ? {color} : null}
         className={classNames(styles.root, {
-
-          [styles.rangeMiddle]: (isSelected && !inSelectionRange),
-
-
+          
           [styles.today]: (isToday && !inSelectionRange),
           [styles.highlighted]: isHighlighted,
           // [styles.selected]: (isSelected && !inSelectionRange),
+          
           [styles.disabled]: isDisabled,
           [styles.enabled]: !isDisabled,
         
           //  [styles.rangeOpen]: isSelectionStart,
-          // [styles.rangeMiddle]: isSelectionMiddle,
+          [styles.rangeMiddle]: isSelectionMiddle,
           // [styles.rangeClose]: isSelectionEnd
         }, className)}
         onClick={this.handleClick}
