@@ -92,7 +92,7 @@ export default class Day extends PureComponent {
           [styles.enabled]: !isDisabled,
         
           //  [styles.rangeOpen]: isSelectionStart,
-          [styles.rangeMiddle]: isSelectionMiddle,
+        //  [styles.rangeMiddle]: isSelectionMiddle,
           // [styles.rangeClose]: isSelectionEnd
         }, className)}
         onClick={this.handleClick}
@@ -104,7 +104,7 @@ export default class Day extends PureComponent {
         {day === 1 &&
           currentYear !== year &&
           <span className={styles.year}>{year}</span>}
-        {isSelected && this.renderSelection()}
+        {/* {isSelected && this.renderSelection()} */}
       </li>
     );
   }
