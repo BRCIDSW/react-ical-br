@@ -1,7 +1,7 @@
 
 $rangeHorzLineOffset : -4px;
 $weekSelectorThickness : 2px;
-$weekSelectorColor : lime;
+$weekSelectorColor : darkgray ;
 
 
 
@@ -29,25 +29,6 @@ $weekSelectorColor : lime;
   border-radius: 0%;
 }
 
-@mixin squareborder( $color : black )
-{
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  border-radius: 0%;
-
-  border-top: $weekSelectorThickness solid $color;
-  border-bottom: $weekSelectorThickness solid $color;;
-  border-right : hidden !important;
-  border-left : hidden !important;
-
-  margin : 0 !important;
-}
-
-
 
 
 
@@ -70,33 +51,20 @@ $weekSelectorColor : lime;
 
 @mixin rangeMiddle($size) {
 
-  @include squareborder($weekSelectorColor);
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
 
-  // content: '';
-  // position: absolute;
-  // top: 50%;
-  // left: 0%;
-  // width: 14%;
-  // height: ($height + $rangeHorzLineOffset + $rangeHorzLineOffset);
-  // margin-top: -0.5 * ($height + $rangeHorzLineOffset);
-  // margin-left: 0;
+  border-top: $weekSelectorThickness solid $color;
+  border-bottom: $weekSelectorThickness solid $color;;
+  border-right : hidden !important;
+  border-left : hidden !important;
 
-  // position: absolute;
-  // margin: 0px;
-  // padding: 0px;
-  // top: 0px;
-  // left: 0px;
-
-  // width: auto;
-  // height: auto;
-
-
-
-
-  // border-top: 4px solid black;
-  // border-bottom: 4px solid black;
-  // border-right : hidden !important;
-  // border-left : hidden !important;
+  margin : 0 !important;
 }
 
 

@@ -104,7 +104,7 @@ export default class Day extends PureComponent {
         }, className)}
         onClick={this.handleClick}
         data-date={date}
-        {...handlers}
+        {...handlers}git  
       >
         {day === 1 && <span className={styles.month}>{monthShort}</span>}
         {isToday ? <span>{day}</span> : day}
