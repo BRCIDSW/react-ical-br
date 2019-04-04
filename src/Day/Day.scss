@@ -20,7 +20,8 @@
       z-index: 1;
 
       &:before {
-        @include circle($rowHeight);
+        // @include circle($rowHeight);
+        @include squareborder;
 
         background-color: $cellHoverBg;
         z-index: -1;

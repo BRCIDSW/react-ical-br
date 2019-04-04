@@ -23,6 +23,23 @@
 }
 
 
+// try
+// @mixin squareborder( $w : calc( 1/7 * 100% ) ) 
+
+@mixin squareborder( $w : 50px )
+{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: $w;
+  height: 56px;
+  border-radius: 0%;
+  border : 3px solid red;
+}
+
+
+
 
 
 $rangeHorzLineOffset : -4px;
