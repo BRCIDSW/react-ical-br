@@ -120,21 +120,18 @@
     .Cal__Day__root.Cal__Day__rangeOpen.Cal__Day__disabled > span {
       color: #AAA; }
     .Cal__Day__root.Cal__Day__rangeOpen:before {
+      content: '';
       position: absolute;
-      margin: 0px;
-      padding: 0px;
       top: 0px;
       left: 0px;
-      width: auto;
-      height: auto;
-      border-left: 4px solid black;
-      border-top: 4px solid black;
-      border-bottom: 4px solid black;
-      border-right: hidden;
-      box-shadow: inset 0 0 0 1px;
-      z-index: -1; }
-    .Cal__Day__root.Cal__Day__rangeOpen.Cal__Day__disabled:before {
-      box-shadow: inset 0 0 0 1px #BBB; }
+      width: 100%;
+      height: 100%;
+      border-radius: 25%;
+      border-top: 2px solid lime;
+      border-bottom: 2px solid lime;
+      border-right: hidden !important;
+      border-left: 2px solid lime;
+      margin: 0 !important; }
   .Cal__Day__root.Cal__Day__rangeClose {
     position: relative;
     z-index: 3; }
@@ -145,21 +142,16 @@
     .Cal__Day__root.Cal__Day__rangeClose:before {
       content: '';
       position: absolute;
-      position: absolute;
-      margin: 0px;
-      padding: 0px;
       top: 0px;
       left: 0px;
       width: 100%;
       height: 100%;
-      border-right: 4px solid black;
-      border-top: 4px solid black;
-      border-bottom: 4px solid black;
-      border-left: hidden;
-      box-shadow: inset 0 0 0 1px;
-      z-index: -1; }
-    .Cal__Day__root.Cal__Day__rangeClose.Cal__Day__disabled:before {
-      box-shadow: inset 0 0 0 1px #BBB; }
+      border-radius: 25%;
+      border-top: 2px solid lime;
+      border-bottom: 2px solid lime;
+      border-left: hidden !important;
+      border-right: 2px solid lime;
+      margin: 0 !important; }
   .Cal__Day__root.Cal__Day__rangeMiddle {
     position: relative;
     z-index: 3; }
@@ -175,15 +167,11 @@
       width: 100%;
       height: 100%;
       border-radius: 0%;
-      border-top: 2px solid orangered;
-      border-bottom: 2px solid orangered;
+      border-top: 2px solid lime;
+      border-bottom: 2px solid lime;
       border-right: hidden !important;
       border-left: hidden !important;
-      margin: 0 !important;
-      box-shadow: inset 0 0 0 1px;
-      z-index: -1; }
-    .Cal__Day__root.Cal__Day__rangeMiddle.Cal__Day__disabled:before {
-      box-shadow: inset 0 0 0 1px #BBB; }
+      margin: 0 !important; }
 
 .Cal__Day__month, .Cal__Day__year {
   position: absolute;
