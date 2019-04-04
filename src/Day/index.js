@@ -88,7 +88,7 @@ export default class Day extends PureComponent {
           // [styles.selected]: (isSelected && !inSelectionRange),
           // [styles.disabled]: isDisabled,
           // [styles.enabled]: !isDisabled,
-          [styles.rangeOpen]: isSelectionStart,
+        //  [styles.rangeOpen]: isSelectionStart,
           // [styles.rangeMiddle]: isSelectionMiddle,
           // [styles.rangeClose]: isSelectionEnd
         }, className)}
