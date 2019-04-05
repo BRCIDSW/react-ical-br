@@ -17,17 +17,16 @@
     .Cal__Day__root.Cal__Day__enabled.Cal__Day__highlighted:before, .Cal__Day__root.Cal__Day__enabled:active:before, .Cal__Day__root.Cal__Day__enabled:hover:before {
       content: '';
       position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 90% !important;
-      border-radius: 0%;
-      border-top: 2px solid black;
-      border-bottom: 2px solid black;
-      border-right: hidden !important;
-      border-left: hidden !important;
-      margin: 0 !important;
-      margin-top: 5% !important;
+      top: 50%;
+      left: 50%;
+      width: -webkit-calc(100% - 15px) !important;
+      width: -moz-calc(100% - 15px) !important;
+      width:  calc(100% - 15px) !important;
+      height: -webkit-calc(100% - 15px) !important;
+      height: -moz-calc(100% - 15px) !important;
+      height:  calc(100% - 15px) !important;
+      margin: 0px;
+      border-radius: 50%;
       background-color: #EFEFEF;
       z-index: -1; }
   .Cal__Day__root.Cal__Day__enabled:hover:before {
@@ -48,10 +47,13 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 52px;
-      height: 52px;
-      margin-top: -26px;
-      margin-left: -26px;
+      width: -webkit-calc(100% - 15px) !important;
+      width: -moz-calc(100% - 15px) !important;
+      width:  calc(100% - 15px) !important;
+      height: -webkit-calc(100% - 15px) !important;
+      height: -moz-calc(100% - 15px) !important;
+      height:  calc(100% - 15px) !important;
+      margin: 0px;
       border-radius: 50%;
       box-shadow: inset 0 0 0 1px;
       z-index: -1; }
@@ -68,10 +70,13 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 52px;
-      height: 52px;
-      margin-top: -26px;
-      margin-left: -26px;
+      width: -webkit-calc(100% - 15px) !important;
+      width: -moz-calc(100% - 15px) !important;
+      width:  calc(100% - 15px) !important;
+      height: -webkit-calc(100% - 15px) !important;
+      height: -moz-calc(100% - 15px) !important;
+      height:  calc(100% - 15px) !important;
+      margin: 0px;
       border-radius: 50%;
       line-height: 56px;
       z-index: 2; }
