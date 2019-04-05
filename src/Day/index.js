@@ -90,12 +90,12 @@ export default class Day extends PureComponent {
         style={color ? {color} : null}
         className={classNames(styles.root, {
           
-          // [styles.today]: (isToday && !inSelectionRange),
+          [styles.today]: (isToday && !inSelectionRange),
           // [styles.highlighted]: isHighlighted,
 
           // // [styles.selected]: (isSelected && !inSelectionRange),
           
-          // [styles.disabled]: isDisabled,
+          [styles.disabled]: isDisabled,
           // [styles.enabled]: !isDisabled,
         
           [styles.rangeOpen]: isSelectionStart,
