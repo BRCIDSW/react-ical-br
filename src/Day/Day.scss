@@ -17,15 +17,21 @@
   &.enabled {
     &.highlighted, &:active, &:hover {
       
-      // position: relative;
-      position: absolute;
-      z-index: 1;
+      position: relative;
+//      z-index: 1;
 
-      &:before {
-        @include circle($rowHeight);
-        background-color: darken( $cellHoverBg, 20%);
-        z-index: -1;
-      }
+  
+      @include circle($rowHeight);
+      background-color: darken( $cellHoverBg, 20%);
+
+      z-index: -1;
+
+
+      // &:before {
+      //   @include circle($rowHeight);
+      //   background-color: darken( $cellHoverBg, 20%);
+      //   z-index: -1;
+      // }
     }
 
     &:hover:before {
