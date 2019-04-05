@@ -2,9 +2,9 @@
 
 $circleReduction : 12px;
 
-@mixin circle() {
+@mixin circle($fillColor : hotpink) {
   content: '';
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   width: $rowHeight - $circleReduction;
@@ -12,6 +12,7 @@ $circleReduction : 12px;
   margin-top: -0.5 * ($rowHeight - $circleReduction);
   margin-left: -0.5 * ($rowHeight - $circleReduction);
   border-radius: 50%;
+  background-color: $fillColor;
 }
 
 .root {
@@ -33,18 +34,18 @@ $circleReduction : 12px;
       z-index: 1;
 
       &:before {
-        @include circle();
-
-        background-color: darken( $cellHoverBg, 20% );
+        // @include circle();
+        // background-color: darken( $cellHoverBg, 20% );
+        @include circle( darken( $cellHoverBg, 20% ) );
         z-index: -1;
       }
     }
 
     &:hover:before {
-      opacity: 0.5;
+      opacity: 0.3;
     }
     &.highlighted:before, &:active:before {
-      opacity: 1;
+      opacity: 0.6;
     }
   }
 
@@ -106,6 +107,25 @@ $circleReduction : 12px;
     color: $textColorDisabled;
     cursor: not-allowed;
   }
+
+
+
+  &.rangeOpen {
+    position: relative;
+    z-index: 3;
+    
+    &:before {
+//        @include rangeOpen();
+        @include circle( yellow );
+        z-index: -1;
+    }
+    
+  }
+
+
+
+
+
 }
 
 .month, .year {
@@ -125,6 +145,13 @@ $circleReduction : 12px;
 .year {
   bottom: 5px;
 }
+
+
+
+
+
+
+
 
 /*
  * Range selection styles
