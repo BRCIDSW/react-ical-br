@@ -1,14 +1,16 @@
 @import "../variables";
 
+$circleReduction : 8px;
+
 @mixin circle() {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: $rowHeight - 4px;
-  height: $rowHeight - 4px;
-  margin-top: -0.5 * ($rowHeight - 4px);
-  margin-left: -0.5 * ($rowHeight - 4px);
+  width: $rowHeight - $circleReduction;
+  height: $rowHeight - $circleReduction;
+  margin-top: -0.5 * ($rowHeight - $circleReduction);
+  margin-left: -0.5 * ($rowHeight - $circleReduction);
   border-radius: 50%;
 }
 
