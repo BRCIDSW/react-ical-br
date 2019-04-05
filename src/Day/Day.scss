@@ -122,6 +122,20 @@ $circleReduction : 12px;
   }
 
 
+  &.rangeClose {
+    position: relative;
+    z-index: 3;
+    
+    &:before {
+//        @include rangeOpen();
+        @include circle( yellow );
+        z-index: -1;
+    }
+  }
+
+
+
+
 //   &.rangeClose {
 //     position: relative;
 //     z-index: 3;
