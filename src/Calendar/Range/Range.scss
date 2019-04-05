@@ -110,14 +110,14 @@ $weekSelectorHeightMargin : 5%;
 @mixin rangeClose {
 
   content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
+  position: absolute !important;
+  top: 0px !important;
+  left: 0px !important;
+  width: 100% !important;
   height: $weekSelectorHeight !important;
-  border-radius: -10%;
+  border-radius: 0%;
 
-  border-color: rgba(black,60%);
+  border-color: purple !important ;
   
 
   border-top: $weekSelectorThickness solid $weekSelectorColor;
@@ -127,7 +127,21 @@ $weekSelectorHeightMargin : 5%;
 
   margin : 0 !important;
   margin-top : $weekSelectorHeightMargin !important;
-  margin-right : 2px !important;
+
+
+  &:before {
+
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+  
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: 20px !important;
+    margin-left: 20px !important;  
+    border-radius: 50% !important;
+  }
+
 }
 
 

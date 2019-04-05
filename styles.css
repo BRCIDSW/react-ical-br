@@ -140,20 +140,28 @@
       color: #AAA; }
     .Cal__Day__root.Cal__Day__rangeClose:before {
       content: '';
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100%;
+      position: absolute !important;
+      top: 0px !important;
+      left: 0px !important;
+      width: 100% !important;
       height: 90% !important;
-      border-radius: -10%;
-      border-color: black;
+      border-radius: 0%;
+      border-color: purple !important;
       border-top: 2px solid darkgray;
       border-bottom: 2px solid darkgray;
       border-left: hidden !important;
       border-right: 2px solid darkgray;
       margin: 0 !important;
-      margin-top: 5% !important;
-      margin-right: 2px !important; }
+      margin-top: 5% !important; }
+      .Cal__Day__root.Cal__Day__rangeClose:before:before {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        width: 40px !important;
+        height: 40px !important;
+        margin-top: 20px !important;
+        margin-left: 20px !important;
+        border-radius: 50% !important; }
   .Cal__Day__root.Cal__Day__rangeMiddle {
     position: relative;
     z-index: 3; }
