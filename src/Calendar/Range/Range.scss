@@ -2,8 +2,8 @@
 $rangeHorzLineOffset : -4px;
 $weekSelectorThickness : 2px;
 $weekSelectorColor : darkgray;
-$weekSelectorHeight : 60%;
-$weekSelectorHeightMargin : 20%;
+$weekSelectorHeight : 90%;
+$weekSelectorHeightMargin : 5%;
 
 
 @mixin circle($size) {
@@ -60,36 +60,23 @@ $weekSelectorHeightMargin : 20%;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: $weekSelectorHeight !important;
   border-radius: 0%;
 
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
   border-right : hidden !important;
   border-left : $weekSelectorThickness solid $weekSelectorColor;
+ 
   margin : 0 !important;
+  margin-top : $weekSelectorHeightMargin !important;
+
 }
 
 @mixin rangeMiddle {
-
   @include squareborder($weekSelectorColor);
-
-  // content: '';
-  // position: absolute;
-  // top: 0px;
-  // left: 0px;
-  // width: 100%;
-  // height: 100%;
-  // border-radius: 0%;
-
-  // border-top: $weekSelectorThickness solid $color;
-  // border-bottom: $weekSelectorThickness solid $color;;
-  // border-right : hidden !important;
-  // border-left : hidden !important;
-
-  // margin : 0 !important;
-
 }
+
 
 
 @mixin rangeClose {
@@ -99,13 +86,14 @@ $weekSelectorHeightMargin : 20%;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: $weekSelectorHeight !important;
   border-radius: 0%;
 
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
   border-left : hidden !important;
   border-right : $weekSelectorThickness solid $weekSelectorColor;
-  margin : 0 !important;
 
+  margin : 0 !important;
+  margin-top : $weekSelectorHeightMargin !important;
 }
