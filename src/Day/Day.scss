@@ -35,7 +35,7 @@ $circleReduction : 8px;
       &:before {
         @include circle();
 
-        background-color: $cellHoverBg;
+        background-color: darken( $cellHoverBg, 20% );
         z-index: -1;
       }
     }
