@@ -16,7 +16,7 @@ $weekSelectorHeightMargin : 5%;
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 1 / 7 * 100%;
+  width: 100%;
   height: $weekSelectorHeight !important;
   border-radius: 0%;
 
@@ -256,8 +256,8 @@ $weekSelectorHeightMargin : 5%;
     z-index: 3;
     
     &:before {
-        @include rangeMiddlePiece();
-        // @include circle( blue );
+        // @include rangeMiddlePiece();
+        @include circle( blue );
         z-index: -1;
     }
   }
