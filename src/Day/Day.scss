@@ -119,8 +119,46 @@ $circleReduction : 12px;
         @include circle( yellow );
         z-index: -1;
     }
-    
   }
+
+
+  &.rangeClose {
+    position: relative;
+    z-index: 3;
+
+    &:before {
+//        @include rangeClose();
+        @include circle( darkorange );  
+        z-index: -1;
+    }
+
+  }
+
+
+  &.rangeMiddle {
+    position: relative;
+    z-index: 3;
+
+    &:before {
+        // @include rangeMiddle();
+        @include circle( lightblue );
+        z-index: -1;
+    }
+  }
+
+
+  &.dirtyMark {
+
+    position: relative;
+    z-index: 3;
+
+    &:before {
+      @include dirtyMark();
+      z-index: -1;
+    }
+
+
+
 
 
 
