@@ -44,6 +44,7 @@
     z-index: 1; }
     .Cal__Day__root.Cal__Day__enabled.Cal__Day__highlighted:before, .Cal__Day__root.Cal__Day__enabled:active:before, .Cal__Day__root.Cal__Day__enabled:hover:before {
       content: '';
+      position: relative;
       top: 50%;
       left: 50%;
       width: 44px;
@@ -68,6 +69,7 @@
       color: #AAA; }
     .Cal__Day__root.Cal__Day__today:before {
       content: '';
+      position: relative;
       top: 50%;
       left: 50%;
       width: 44px;
@@ -87,6 +89,7 @@
       display: none; }
     .Cal__Day__root.Cal__Day__selected .Cal__Day__selection {
       content: '';
+      position: relative;
       top: 50%;
       left: 50%;
       width: 44px;
