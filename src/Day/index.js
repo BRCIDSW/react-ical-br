@@ -78,26 +78,19 @@ export default class Day extends PureComponent {
     var isSelectionMiddle = inSelectionRange &&  (1 < dayOfWeek && dayOfWeek < 5 );
     var isSelectionEnd = inSelectionRange && dayOfWeek === 5;
 
-
-    if( isSelectionMiddle )
-    {
-      console.log("foo");
-    }
-
-
     return (
       <li
         style={color ? {color} : null}
         className={classNames(styles.root, {
           
-          [styles.today]: (isToday),
+          // [styles.today]: (isToday),
           
           // [styles.highlighted]: isHighlighted,
 
           // // [styles.selected]: (isSelected && !inSelectionRange),
           
           [styles.disabled]: isDisabled,
-          // [styles.enabled]: !isDisabled,
+          [styles.enabled]: !isDisabled,
         
           [styles.rangeOpen]: isSelectionStart,
           [styles.rangeMiddle]: isSelectionMiddle,

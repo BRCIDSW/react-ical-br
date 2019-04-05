@@ -27,7 +27,7 @@
       height:  calc(100% - 15px) !important;
       margin: 0px;
       border-radius: 50%;
-      background-color: #EFEFEF;
+      background-color: hotpink;
       z-index: -1; }
   .Cal__Day__root.Cal__Day__enabled:hover:before {
     opacity: 0.5; }
