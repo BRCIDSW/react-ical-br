@@ -99,7 +99,7 @@ export default class Day extends PureComponent {
           [styles.rangeOpen]: isSelectionStart,
           [styles.rangeMiddle]: isSelectionMiddle,
           [styles.rangeClose]: isSelectionEnd,
-          // [styles.dirtyMark]: markDirty,
+          [styles.dirtyMark]: markDirty,
 
 
         }, className)}

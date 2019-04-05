@@ -11,6 +11,33 @@ $weekSelectorHeightMargin : 5%;
 
 
 
+@mixin rangeOpen {
+
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: $weekSelectorHeight !important;
+  border-radius: 0%;
+
+
+  border-color: rgba(black,10%);
+  
+  border-top: $weekSelectorThickness solid $weekSelectorColor;
+  border-bottom: $weekSelectorThickness solid $weekSelectorColor;
+  border-right : hidden !important;
+  border-left : $weekSelectorThickness solid $weekSelectorColor;
+ 
+  margin : 0 !important;
+  margin-top : $weekSelectorHeightMargin !important;
+
+}
+
+
+
+
+
 
 
 @mixin circle($fillColor : hotpink) {
@@ -162,7 +189,7 @@ $weekSelectorHeightMargin : 5%;
     z-index: 3;
     
     &:before {
-//        @include rangeOpen();
+//        @include rangeClose();
         @include circle( magenta );
         z-index: -1;
     }
@@ -174,7 +201,7 @@ $weekSelectorHeightMargin : 5%;
     z-index: 3;
     
     &:before {
-//        @include rangeOpen();
+//        @include rangeMiddle();
         @include circle( blue );
         z-index: -1;
     }
