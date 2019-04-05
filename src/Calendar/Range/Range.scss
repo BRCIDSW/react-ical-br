@@ -41,6 +41,8 @@ $weekSelectorHeightMargin : 5%;
   height: $weekSelectorHeight !important;
   border-radius: 0%;
 
+  border-color: rgba(black,20%);
+
   border-top: $weekSelectorThickness solid $color;
   border-bottom: $weekSelectorThickness solid $color;;
   border-right : hidden !important;
@@ -62,6 +64,9 @@ $weekSelectorHeightMargin : 5%;
   height: $weekSelectorHeight !important;
   border-radius: 0%;
 
+
+  border-color: rgba(black,40%);
+  
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
   border-right : hidden !important;
@@ -86,7 +91,10 @@ $weekSelectorHeightMargin : 5%;
   left: 0px;
   width: 100%;
   height: $weekSelectorHeight !important;
-  border-radius: 0%;
+  border-radius: -10%;
+
+  border-color: rgba(black,60%);
+  
 
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
@@ -95,6 +103,7 @@ $weekSelectorHeightMargin : 5%;
 
   margin : 0 !important;
   margin-top : $weekSelectorHeightMargin !important;
+  margin-right : 2px !important;
 }
 
 
