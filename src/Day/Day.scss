@@ -10,9 +10,8 @@ $weekSelectorHeight : 90%;
 $weekSelectorHeightMargin : 5%;
 
 
-
-@mixin rangeOpen {
-
+@mixin rangeBase 
+{
   content: '';
   position: absolute;
   top: 0px;
@@ -21,18 +20,74 @@ $weekSelectorHeightMargin : 5%;
   height: $weekSelectorHeight !important;
   border-radius: 0%;
 
-
   border-color: rgba(black,10%);
-  
+  margin : 0 !important;
+  margin-top : $weekSelectorHeightMargin !important;
+}
+
+
+@mixin rangeOpen {
+
+  @include rangeBase();  
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
   border-right : hidden !important;
   border-left : $weekSelectorThickness solid $weekSelectorColor;
- 
-  margin : 0 !important;
-  margin-top : $weekSelectorHeightMargin !important;
-
 }
+
+
+@mixin rangeClose {
+
+  @include rangeBase();  
+  border-top: $weekSelectorThickness solid $weekSelectorColor;
+  border-bottom: $weekSelectorThickness solid $weekSelectorColor;
+  border-left : hidden !important;
+  border-right : $weekSelectorThickness solid $weekSelectorColor;
+}
+
+
+@mixin rangeMiddle {
+
+  @include rangeBase();  
+
+  border-top: $weekSelectorThickness solid $color;
+  border-bottom: $weekSelectorThickness solid $color;;
+  border-right : hidden !important;
+  border-left : hidden !important;
+}
+
+
+
+
+
+// @mixin rangePiece($type) {
+
+//   content: '';
+//   position: absolute !important;
+//   top: 0px !important;
+//   left: 0px !important;
+//   width: 100% !important;
+//   height: $weekSelectorHeight !important;
+//   border-radius: 0%;
+//   border-color: rgba(black,10%);
+
+//   margin : 0 !important;
+
+//   @if($type=left)
+//   {
+
+//   }
+//   @else if($type=) 
+
+
+//   border-top: $weekSelectorThickness solid $weekSelectorColor;
+//   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
+//   border-left : hidden !important;
+//   border-right : $weekSelectorThickness solid $weekSelectorColor;
+
+//   margin-top : $weekSelectorHeightMargin !important;
+// }
+
 
 
 
@@ -177,7 +232,7 @@ $weekSelectorHeightMargin : 5%;
     z-index: 3;
     
     &:before {
-        @include rangeOpen();
+        @include rangeOpenPiece();
         // @include circle( yellow );
         z-index: -1;
     }
@@ -189,8 +244,8 @@ $weekSelectorHeightMargin : 5%;
     z-index: 3;
     
     &:before {
-//        @include rangeClose();
-        @include circle( magenta );
+        @include rangeClosePiece();
+        // @include circle( magenta );
         z-index: -1;
     }
   }
@@ -201,8 +256,8 @@ $weekSelectorHeightMargin : 5%;
     z-index: 3;
     
     &:before {
-//        @include rangeMiddle();
-        @include circle( blue );
+        @include rangeMiddlePiece();
+        // @include circle( blue );
         z-index: -1;
     }
   }
