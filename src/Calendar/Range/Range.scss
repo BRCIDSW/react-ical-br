@@ -6,37 +6,8 @@ $weekSelectorHeight : 90%;
 $weekSelectorHeightMargin : 5%;
 
 
-@mixin circleSize
-{
-  width: unquote("-webkit-calc(100% - 15px)") !important;
-  width: unquote("-moz-calc(100% - 15px)") !important;
-  width: unquote(" calc(100% - 15px)") !important;
-  height: unquote("-webkit-calc(100% - 15px)") !important;
-  height: unquote("-moz-calc(100% - 15px)") !important;
-  height: unquote(" calc(100% - 15px)") !important;
-}
-
-
 
 @mixin circle($size) {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  
-  @include circleSize();
-
-  // width: $size - 4px;
-  // height: $size - 4px;
-  // margin-top: -0.5 * ($size - 4px);
-  // margin-left: -0.5 * ($size - 4px);
-  
-  margin: 0px;
-  
-  border-radius: 50%;
-}
-
-@mixin square($size) {
   content: '';
   position: absolute;
   top: 50%;
@@ -45,8 +16,20 @@ $weekSelectorHeightMargin : 5%;
   height: $size - 4px;
   margin-top: -0.5 * ($size - 4px);
   margin-left: -0.5 * ($size - 4px);
-  border-radius: 0%;
+  border-radius: 50%;
 }
+
+// @mixin square($size) {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: $size - 4px;
+//   height: $size - 4px;
+//   margin-top: -0.5 * ($size - 4px);
+//   margin-left: -0.5 * ($size - 4px);
+//   border-radius: 0%;
+// }
 
 @mixin squareborder( $color : black )
 {
@@ -66,8 +49,6 @@ $weekSelectorHeightMargin : 5%;
   margin : 0 !important;
   margin-top : $weekSelectorHeightMargin !important;
 }
-
-
 
 
 
