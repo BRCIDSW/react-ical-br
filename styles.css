@@ -153,15 +153,6 @@
       border-right: 2px solid darkgray;
       margin: 0 !important;
       margin-top: 5% !important; }
-      .Cal__Day__root.Cal__Day__rangeClose:before:before {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        width: 40px !important;
-        height: 40px !important;
-        margin-top: 20px !important;
-        margin-left: 20px !important;
-        border-radius: 50% !important; }
   .Cal__Day__root.Cal__Day__rangeMiddle {
     position: relative;
     z-index: 3; }

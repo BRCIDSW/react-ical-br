@@ -65,7 +65,7 @@ $weekSelectorHeightMargin : 5%;
   height: $weekSelectorHeight !important;
   border-radius: 0%;
 
-  border-color: rgba(black,20%);
+  border-color: rgba(black,10%);
 
   border-top: $weekSelectorThickness solid $color;
   border-bottom: $weekSelectorThickness solid $color;;
@@ -89,7 +89,7 @@ $weekSelectorHeightMargin : 5%;
   border-radius: 0%;
 
 
-  border-color: rgba(black,40%);
+  border-color: rgba(black,10%);
   
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
@@ -129,18 +129,18 @@ $weekSelectorHeightMargin : 5%;
   margin-top : $weekSelectorHeightMargin !important;
 
 
-  &:before {
+  // &:before {
 
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
+  //   position: absolute !important;
+  //   top: 50% !important;
+  //   left: 50% !important;
   
-    width: 40px !important;
-    height: 40px !important;
-    margin-top: 20px !important;
-    margin-left: 20px !important;  
-    border-radius: 50% !important;
-  }
+  //   width: 40px !important;
+  //   height: 40px !important;
+  //   margin-top: 20px !important;
+  //   margin-left: 20px !important;  
+  //   border-radius: 50% !important;
+  // }
 
 }
 
