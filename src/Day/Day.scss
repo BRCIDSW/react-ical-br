@@ -163,7 +163,7 @@ $weekSelectorHeightMargin : 5%;
     
     &:before {
 //        @include rangeOpen();
-        @include circle( yellow );
+        @include circle( magenta );
         z-index: -1;
     }
   }
@@ -175,7 +175,7 @@ $weekSelectorHeightMargin : 5%;
     
     &:before {
 //        @include rangeOpen();
-        @include circle( yellow );
+        @include circle( blue );
         z-index: -1;
     }
   }
@@ -185,9 +185,8 @@ $weekSelectorHeightMargin : 5%;
     z-index: 3;
     
     &:before {
-//        @include rangeOpen();
-        @include circle( yellow );
-        z-index: -1;
+      @include dirtyMark(); 
+      z-index: -1;
     }
   }
 
