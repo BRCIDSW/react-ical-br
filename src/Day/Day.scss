@@ -2,6 +2,17 @@
 
 $circleReduction : 12px;
 
+$rangeHorzLineOffset : -4px;
+$weekSelectorThickness : 2px;
+$weekSelectorColor : darkgray;
+
+$weekSelectorHeight : 90%;
+$weekSelectorHeightMargin : 5%;
+
+
+
+
+
 @mixin circle($fillColor : hotpink) {
   content: '';
   position: absolute;
@@ -14,6 +25,30 @@ $circleReduction : 12px;
   border-radius: 50%;
   background-color: $fillColor;
 }
+
+@mixin dirtyMark 
+{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: $weekSelectorHeight !important;
+  border-radius: 0%;
+
+  border-top: hidden !important;
+  border-bottom: hidden !important;
+  border-left : hidden !important;
+  border-right : 4px solid red;
+
+  margin : 0 !important;
+  margin-top : $weekSelectorHeightMargin !important;
+}
+
+
+
+
+
 
 .root {
   display: inline-block;
@@ -135,6 +170,17 @@ $circleReduction : 12px;
 
 
   &.rangeMiddle {
+    position: relative;
+    z-index: 3;
+    
+    &:before {
+//        @include rangeOpen();
+        @include circle( yellow );
+        z-index: -1;
+    }
+  }
+
+  &.dirtyMark {
     position: relative;
     z-index: 3;
     

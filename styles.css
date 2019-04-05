@@ -156,6 +156,21 @@
       border-radius: 50%;
       background-color: yellow;
       z-index: -1; }
+  .Cal__Day__root.Cal__Day__dirtyMark {
+    position: relative;
+    z-index: 3; }
+    .Cal__Day__root.Cal__Day__dirtyMark:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 44px;
+      height: 44px;
+      margin-top: -22px;
+      margin-left: -22px;
+      border-radius: 50%;
+      background-color: yellow;
+      z-index: -1; }
 
 .Cal__Day__month, .Cal__Day__year {
   position: absolute;
