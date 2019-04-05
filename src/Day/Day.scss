@@ -26,7 +26,7 @@ $weekSelectorHeightMargin : 5%;
 }
 
 
-@mixin rangeOpen {
+@mixin rangeOpenPiece {
 
   @include rangeBase();  
   border-top: $weekSelectorThickness solid $weekSelectorColor;
@@ -36,7 +36,7 @@ $weekSelectorHeightMargin : 5%;
 }
 
 
-@mixin rangeClose {
+@mixin rangeClosePiece {
 
   @include rangeBase();  
   border-top: $weekSelectorThickness solid $weekSelectorColor;
@@ -46,7 +46,7 @@ $weekSelectorHeightMargin : 5%;
 }
 
 
-@mixin rangeMiddle {
+@mixin rangeMiddlePiece {
 
   @include rangeBase();  
 
