@@ -7,17 +7,41 @@ $weekSelectorHeightMargin : 5%;
 
 
 
+// @mixin circle($size) {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: $size - 10px;
+//   height: $size - 10px;
+//   margin-top: -0.5 * ($size - 10px);
+//   margin-left: -0.5 * ($size - 10px);
+//   border-radius: 50%;
+// }
+
 @mixin circle($size) {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: $size - 10px;
-  height: $size - 10px;
-  margin-top: -0.5 * ($size - 10px);
-  margin-left: -0.5 * ($size - 10px);
+
+  // width: $size - 10px;
+  // height: $size - 10px;
+  // margin-top: -0.5 * ($size - 10px);
+  // margin-left: -0.5 * ($size - 10px);
+
+
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+
+
   border-radius: 50%;
 }
+
+
+
 
 // @mixin square($size) {
 //   content: '';

@@ -47,10 +47,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 46px;
-      height: 46px;
-      margin-top: -23px;
-      margin-left: -23px;
+      width: 40px;
+      height: 40px;
+      margin-top: 20px;
+      margin-left: 20px;
       border-radius: 50%;
       background-color: #cccccc;
       z-index: -1; }
@@ -72,10 +72,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 46px;
-      height: 46px;
-      margin-top: -23px;
-      margin-left: -23px;
+      width: 40px;
+      height: 40px;
+      margin-top: 20px;
+      margin-left: 20px;
       border-radius: 50%;
       box-shadow: inset 0 0 0 1px;
       z-index: -1; }
@@ -92,10 +92,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 46px;
-      height: 46px;
-      margin-top: -23px;
-      margin-left: -23px;
+      width: 40px;
+      height: 40px;
+      margin-top: 20px;
+      margin-left: 20px;
       border-radius: 50%;
       line-height: 56px;
       z-index: 2; }
@@ -111,84 +111,88 @@
     cursor: not-allowed; }
   .Cal__Day__root.Cal__Day__rangeOpen {
     position: relative;
-    z-index: 3;
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 90% !important;
-    border-radius: 0%;
-    border-color: black;
-    border-top: 2px solid darkgray;
-    border-bottom: 2px solid darkgray;
-    border-right: hidden !important;
-    border-left: 2px solid darkgray;
-    margin: 0 !important;
-    margin-top: 5% !important; }
+    z-index: 3; }
     .Cal__Day__root.Cal__Day__rangeOpen > span {
       background-color: darkorange; }
     .Cal__Day__root.Cal__Day__rangeOpen.Cal__Day__disabled > span {
       color: #AAA; }
+    .Cal__Day__root.Cal__Day__rangeOpen:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 90% !important;
+      border-radius: 0%;
+      border-color: black;
+      border-top: 2px solid darkgray;
+      border-bottom: 2px solid darkgray;
+      border-right: hidden !important;
+      border-left: 2px solid darkgray;
+      margin: 0 !important;
+      margin-top: 5% !important; }
   .Cal__Day__root.Cal__Day__rangeClose {
     position: relative;
-    z-index: 3;
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 90% !important;
-    border-radius: -10%;
-    border-color: black;
-    border-top: 2px solid darkgray;
-    border-bottom: 2px solid darkgray;
-    border-left: hidden !important;
-    border-right: 2px solid darkgray;
-    margin: 0 !important;
-    margin-top: 5% !important;
-    margin-right: 2px !important; }
+    z-index: 3; }
     .Cal__Day__root.Cal__Day__rangeClose > span {
       color: purple; }
     .Cal__Day__root.Cal__Day__rangeClose.Cal__Day__disabled > span {
       color: #AAA; }
+    .Cal__Day__root.Cal__Day__rangeClose:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 90% !important;
+      border-radius: -10%;
+      border-color: black;
+      border-top: 2px solid darkgray;
+      border-bottom: 2px solid darkgray;
+      border-left: hidden !important;
+      border-right: 2px solid darkgray;
+      margin: 0 !important;
+      margin-top: 5% !important;
+      margin-right: 2px !important; }
   .Cal__Day__root.Cal__Day__rangeMiddle {
     position: relative;
-    z-index: 3;
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 90% !important;
-    border-radius: 0%;
-    border-color: black;
-    border-top: 2px solid darkgray;
-    border-bottom: 2px solid darkgray;
-    border-right: hidden !important;
-    border-left: hidden !important;
-    margin: 0 !important;
-    margin-top: 5% !important; }
+    z-index: 3; }
     .Cal__Day__root.Cal__Day__rangeMiddle > span {
       color: #106cd4; }
     .Cal__Day__root.Cal__Day__rangeMiddle.Cal__Day__disabled > span {
       color: #AAA; }
+    .Cal__Day__root.Cal__Day__rangeMiddle:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 90% !important;
+      border-radius: 0%;
+      border-color: black;
+      border-top: 2px solid darkgray;
+      border-bottom: 2px solid darkgray;
+      border-right: hidden !important;
+      border-left: hidden !important;
+      margin: 0 !important;
+      margin-top: 5% !important; }
   .Cal__Day__root.Cal__Day__dirtyMark {
     position: relative;
-    z-index: 3;
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 90% !important;
-    border-radius: 0%;
-    border-top: hidden !important;
-    border-bottom: hidden !important;
-    border-left: hidden !important;
-    border-right: 4px solid red;
-    margin: 0 !important;
-    margin-top: 5% !important; }
+    z-index: 3; }
+    .Cal__Day__root.Cal__Day__dirtyMark:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 90% !important;
+      border-radius: 0%;
+      border-top: hidden !important;
+      border-bottom: hidden !important;
+      border-left: hidden !important;
+      border-right: 4px solid red;
+      margin: 0 !important;
+      margin-top: 5% !important; }
 
 .Cal__Day__month, .Cal__Day__year {
   position: absolute;
@@ -624,10 +628,10 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          width: 34px;
-          height: 34px;
-          margin-top: -17px;
-          margin-left: -17px;
+          width: 40px;
+          height: 40px;
+          margin-top: 20px;
+          margin-left: 20px;
           border-radius: 50%;
           line-height: 40px;
           z-index: 2; }
