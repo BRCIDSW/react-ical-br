@@ -119,6 +119,7 @@ export default class MonthList extends Component {
   renderMonth = ({index, style}) => {
     let {
       DayComponent,
+      dirtyWeeks,       // BR/OPF
       disabledDates,
       disabledDays,
       locale,
@@ -145,6 +146,7 @@ export default class MonthList extends Component {
         selectedRange={selectedRange}
         DayComponent={DayComponent}
         monthDate={date}
+        dirtyWeeks={dirtyWeeks}
         disabledDates={disabledDates}
         disabledDays={disabledDays}
         maxDate={maxDate}

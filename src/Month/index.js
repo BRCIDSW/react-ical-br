@@ -1,9 +1,10 @@
 import React, {PureComponent} from 'react';
 import classNames from 'classnames';
-import {getDateString} from '../utils';
+import {getDateString, isDateInWeeks} from '../utils';
 import format from 'date-fns/format';
 import parse from 'date-fns/parse';
 import getDay from 'date-fns/get_day';
+import isSameWeek from 'date-fns/is_same_week';
 import isSameYear from 'date-fns/is_same_year';
 import styles from './Month.scss';
 
@@ -11,6 +12,7 @@ export default class Month extends PureComponent {
   renderRows() {
     const {
       DayComponent,
+      dirtyWeeks,     // array of dates which are locally modified
       disabledDates,
       disabledDays,
       monthDate,
@@ -35,6 +37,7 @@ export default class Month extends PureComponent {
     let isToday = false;
     let date, days, dow, row;
     let inSelectionRange = false;
+    let isInDirtyWeek = false;
 
     // Used for faster comparisons
     const _today = format(today, 'YYYY-MM-DD');
@@ -49,7 +52,9 @@ export default class Month extends PureComponent {
     for (let i = 0, len = rows.length; i < len; i++) {
       row = rows[i];
       days = [];
-      dow = getDay(new Date(year, month, row[0]));
+
+      const thisDay = new Date(year, month, row[0]);
+      dow = getDay(thisDay);
 
       for (let k = 0, len = row.length; k < len; k++) {
         day = row[k];
@@ -67,7 +72,7 @@ export default class Month extends PureComponent {
 				);
 
         inSelectionRange = _minSelectionDate && (_minSelectionDate <= date && date <= _maxSelectionDate); 
-
+        isInDirtyWeek = isDateInWeeks(thisDay, dirtyWeeks);
 
         days[k] = (
 					<DayComponent
@@ -77,7 +82,8 @@ export default class Month extends PureComponent {
 						day={day}
             selected={selected}
             inSelectionRange={inSelectionRange}
-						isDisabled={isDisabled}
+            isDisabled={isDisabled}
+            isInDirtyWeek={isInDirtyWeek}
 						isToday={isToday}
 						locale={locale}
             month={month}

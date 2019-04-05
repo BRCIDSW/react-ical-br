@@ -267,6 +267,7 @@ export default class Calendar extends Component {
 			className,
       passThrough,
       DayComponent,
+      dirtyWeeks,         // BR/OPF
 			disabledDays,
       displayDate,
 			height,
@@ -274,7 +275,7 @@ export default class Calendar extends Component {
       rowHeight,
       scrollDate,
       selected,
-      selectedRange,
+      selectedRange,        // BR/OPF
 			tabIndex,
 			width,
       YearsComponent,
@@ -343,6 +344,7 @@ export default class Calendar extends Component {
                 this._MonthList = instance;
               }}
               DayComponent={DayComponent}
+              dirtyWeeks={dirtyWeeks}               // BR/OPF
               disabledDates={disabledDates}
               disabledDays={disabledDays}
               height={height}
@@ -359,7 +361,7 @@ export default class Calendar extends Component {
               today={today}
               rowHeight={rowHeight}
               selected={selected}
-              selectedRange={selectedRange}
+              selectedRange={selectedRange}         // BR/OPF
               scrollDate={scrollDate}
               showOverlay={showOverlay}
               width={width}

@@ -4,6 +4,7 @@ import getDay from 'date-fns/get_day';
 import isAfter from 'date-fns/is_after';
 import isBefore from 'date-fns/is_before';
 import isSameDay from 'date-fns/is_same_day';
+import isSameWeek from 'date-fns/is_same_week'
 import endOfDay from 'date-fns/end_of_day';
 import startOfDay from 'date-fns/start_of_day';
 import withPropsOnChange from 'recompose/withPropsOnChange';
@@ -202,5 +203,24 @@ export function getSortedDate(start, end) {
     ? {start, end}
     : {start: end, end: start};
 }
+
+export function isDateInWeeks(date,weeks)
+{
+  if(weeks)
+  {
+    const length = weeks.length;
+
+    for( let i = 0; i < length; ++i )
+    {
+      if( isSameWeek(date,weeks[i]))
+      {
+        return true;
+      }
+    }  
+  }
+  
+  return false;
+}
+
 
 export {default as animate} from './animate';

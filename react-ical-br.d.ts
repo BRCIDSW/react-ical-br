@@ -35,6 +35,7 @@ export interface ReactInfiniteCalendarProps {
     max?: DateType;
     minDate?: DateType;
     maxDate?: DateType;
+    dirtyWeeks?: Date[],
     disabledDays?: Array<0 | 1 | 2 | 3 | 4 | 5 | 6>;
     disabledDates?: DateType[];
     display?: 'days' | 'years';

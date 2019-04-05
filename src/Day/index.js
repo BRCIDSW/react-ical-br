@@ -49,6 +49,7 @@ export default class Day extends PureComponent {
       date,
       day,
       handlers,
+      isInDirtyWeek,
       inSelectionRange,
       isDisabled,
       isHighlighted,
@@ -78,6 +79,9 @@ export default class Day extends PureComponent {
     var isSelectionMiddle = inSelectionRange &&  (1 < dayOfWeek && dayOfWeek < 5 );
     var isSelectionEnd = inSelectionRange && dayOfWeek === 5;
 
+    // mark each sunday of a dirty week 
+    var markDirty = isInDirtyWeek && dayOfWeek === 6;
+
     return (
       <li
         style={color ? {color} : null}
@@ -94,11 +98,14 @@ export default class Day extends PureComponent {
         
           [styles.rangeOpen]: isSelectionStart,
           [styles.rangeMiddle]: isSelectionMiddle,
-          [styles.rangeClose]: isSelectionEnd
+          [styles.rangeClose]: isSelectionEnd,
+          [styles.dirtyMark]: markDirty,
+
+
         }, className)}
         onClick={this.handleClick}
         data-date={date}
-        {...handlers}git  
+        {...handlers}
       >
         {day === 1 && <span className={styles.month}>{monthShort}</span>}
         {isToday ? <span>{day}</span> : day}

@@ -12,10 +12,10 @@ $weekSelectorHeightMargin : 5%;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: $size - 4px;
-  height: $size - 4px;
-  margin-top: -0.5 * ($size - 4px);
-  margin-left: -0.5 * ($size - 4px);
+  width: $size - 10px;
+  height: $size - 10px;
+  margin-top: -0.5 * ($size - 10px);
+  margin-left: -0.5 * ($size - 10px);
   border-radius: 50%;
 }
 
@@ -95,4 +95,25 @@ $weekSelectorHeightMargin : 5%;
 
   margin : 0 !important;
   margin-top : $weekSelectorHeightMargin !important;
+}
+
+
+@mixin dirtyMark 
+{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: $weekSelectorHeight !important;
+  border-radius: 0%;
+
+  border-top: hidden !important;
+  border-bottom: hidden !important;
+  border-left : hidden !important;
+  border-right : 4px solid red;
+
+  margin : 0 !important;
+  margin-top : $weekSelectorHeightMargin !important;
+
 }
