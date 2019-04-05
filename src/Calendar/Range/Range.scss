@@ -21,7 +21,7 @@ $weekSelectorHeightMargin : 5%;
 
 @mixin circle($size) {
   content: '';
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   left: 50%;
 
