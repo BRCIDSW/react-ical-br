@@ -78,9 +78,6 @@ export default class Day extends PureComponent {
     var isSelectionStart = inSelectionRange &&  dayOfWeek === 1;
     
     var isSelectionMiddle = inSelectionRange &&  (1 < dayOfWeek && dayOfWeek < 5 );
-    // var isSelectionMiddle = inSelectionRange &&  dayOfWeek === 3 ;
-    
-    
     var isSelectionEnd = inSelectionRange && dayOfWeek === 5;
 
     // mark each sunday of a dirty week 
@@ -98,7 +95,7 @@ export default class Day extends PureComponent {
           // // [styles.selected]: (isSelected && !inSelectionRange),
           
           [styles.disabled]: isDisabled,
-          [styles.enabled]: (!isDisabled && !inSelectionRange),
+          [styles.enabled]: (!isDisabled),
         
           [styles.rangeOpen]: isSelectionStart,
           [styles.rangeMiddle]: isSelectionMiddle,
