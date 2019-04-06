@@ -50,8 +50,8 @@ $weekSelectorHeightMargin : 5%;
 
   @include rangeBase();  
 
-  border-top: $weekSelectorThickness solid $color;
-  border-bottom: $weekSelectorThickness solid $color;;
+  border-top: $weekSelectorThickness solid $weekSelectorColor;
+  border-bottom: $weekSelectorThickness solid $weekSelectorColor;
   border-right : hidden !important;
   border-left : hidden !important;
 }
@@ -256,8 +256,12 @@ $weekSelectorHeightMargin : 5%;
     z-index: 3;
     
     &:before {
-        // @include rangeMiddlePiece();
-        @include circle( blue );
+        
+      // does not work 3 in a row
+      // just wednesday: 
+      @include rangeMiddlePiece();
+        
+        // @include circle( blue );    works with 3 in a row
         z-index: -1;
     }
   }
