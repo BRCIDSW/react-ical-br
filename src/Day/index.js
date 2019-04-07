@@ -75,10 +75,10 @@ export default class Day extends PureComponent {
     }
 
     var dayOfWeek = getDay(date);
-    var isSelectionStart = inSelectionRange &&  dayOfWeek === 1;
+    var isSelectionStart = inSelectionRange &&  dayOfWeek === 0;
     
-    var isSelectionMiddle = inSelectionRange &&  (1 < dayOfWeek && dayOfWeek < 5 );
-    var isSelectionEnd = inSelectionRange && dayOfWeek === 5;
+    var isSelectionMiddle = inSelectionRange &&  (0 < dayOfWeek && dayOfWeek < 5 );
+    var isSelectionEnd = inSelectionRange && dayOfWeek === 6;
 
     // mark each sunday of a dirty week 
     var markDirty = isInDirtyWeek && dayOfWeek === 6;
@@ -86,7 +86,7 @@ export default class Day extends PureComponent {
     return (
       <li
         style={color ? {color} : null}
-        className={classNames(styles.root, {
+          className={classNames(styles.root, {  
           
           [styles.today]: (isToday),
           
