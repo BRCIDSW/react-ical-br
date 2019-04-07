@@ -299,9 +299,10 @@ export default class Calendar extends Component {
     const locale = this.getLocale();
     const theme = this.getTheme();
    
+    const today = this.today = startOfDay(new Date());
+    
     // OPF TEST
-    // const today = this.today = startOfDay(new Date());
-    const today = this.today = addDays(new Date(), 1);
+    // const today = this.today = addDays(new Date(), 1);
 
 
     return (
