@@ -75,7 +75,7 @@ export default class Day extends PureComponent {
     }
 
     var dayOfWeek = getDay(date);
-    var isSelectionStart = (inSelectionRange &&  dayOfWeek === 1)  || dayOfWeek === 0;
+    var isSelectionStart = (inSelectionRange &&  dayOfWeek === 1);
     
     var isSelectionMiddle = inSelectionRange &&  (1 < dayOfWeek && dayOfWeek < 5 );
     var isSelectionEnd = inSelectionRange && dayOfWeek === 5;

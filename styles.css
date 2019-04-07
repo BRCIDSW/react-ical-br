@@ -1,3 +1,31 @@
+/*  imported from Container.scss  */
+
+.Cal__Container__root {
+  position: relative;
+  display: table;
+  z-index: 1;
+  line-height: 1.4em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  outline: none;
+  text-align: left; }
+  .Cal__Container__root.Cal__Container__landscape {
+    display: flex;
+    flex-direction: row; }
+    .Cal__Container__root.Cal__Container__landscape .Cal__Container__wrapper {
+      position: relative;
+      flex-grow: 1;
+      overflow: hidden;
+      z-index: 1;
+      background: red;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
+
+.Cal__Container__listWrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #FFF; }
 /*
   imported from Day.scss 
  */

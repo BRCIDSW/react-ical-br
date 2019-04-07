@@ -16,6 +16,9 @@ import parse from 'date-fns/parse';
 import format from 'date-fns/format';
 import startOfDay from 'date-fns/start_of_day';
 
+
+import addDays from "date-fns/add_days";
+
 const styles = {
   container: require('./Container.scss'),
   day: require('../Day/Day.scss'),
@@ -295,7 +298,11 @@ export default class Calendar extends Component {
     const { disabledDates } = this.props;
     const locale = this.getLocale();
     const theme = this.getTheme();
-    const today = this.today = startOfDay(new Date());
+   
+    // OPF TEST
+    // const today = this.today = startOfDay(new Date());
+    const today = this.today = addDays(new Date(), 1);
+
 
     return (
       <div
