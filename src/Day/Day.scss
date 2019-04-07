@@ -4,7 +4,9 @@ $circleReduction : 12px;
 
 $rangeHorzLineOffset : -4px;
 $weekSelectorThickness : 2px;
-$weekSelectorColor : rgba(0,0,0,.5);
+$weekSelectorColor : red;
+$weekSelectorCornerRadius : 15%;
+
 
 $weekSelectorHeight : 90%;
 $weekSelectorHeightMargin : 5%;
@@ -12,6 +14,7 @@ $weekSelectorHeightMargin : 5%;
 
 $weekSelectorZindex : 10;
 $todayZindex : -1;
+
 
 
 @mixin rangeBase 
@@ -32,19 +35,27 @@ $todayZindex : -1;
 }
 
 
+
+
 @mixin rangeOpenPiece {
 
-  @include rangeBase();  
+  @include rangeBase();
+  border-top-left-radius: weekSelectorCornerRadius;
+  border-bottom-left-radius: weekSelectorCornerRadius;
+
+  
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
   border-right : hidden !important;
   border-left : $weekSelectorThickness solid $weekSelectorColor;
 }
 
-
 @mixin rangeClosePiece {
 
-  @include rangeBase();  
+  @include rangeBase();
+  border-top-right-radius: weekSelectorCornerRadius;
+  border-bottom-right-radius: weekSelectorCornerRadius;
+
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
   border-left : hidden !important;
@@ -61,8 +72,6 @@ $todayZindex : -1;
   border-right : hidden !important;
   border-left : hidden !important;
 }
-
-
 
 @mixin circle($fillColor : hotpink) {
   content: '';
@@ -97,10 +106,6 @@ $todayZindex : -1;
 }
 
 
-
-
-
-
 .root {
   display: inline-block;
   box-sizing: border-box;
@@ -120,8 +125,6 @@ $todayZindex : -1;
       z-index: 1;
 
       &:before {
-        // @include circle();
-        // background-color: darken( $cellHoverBg, 20% );
         @include circle( darken( $cellHoverBg, 20% ) );
         z-index: -1;
       }
@@ -236,45 +239,6 @@ $todayZindex : -1;
       z-index: -1;
     }
   }
-
-
-
-
-//   &.rangeClose {
-//     position: relative;
-//     z-index: 3;
-
-//     &:before {
-// //        @include rangeClose();
-//         @include circle( darkorange );  
-//         z-index: -1;
-//     }
-
-//   }
-
-
-//   &.rangeMiddle {
-//     position: relative;
-//     z-index: 3;
-
-//     &:before {
-//         // @include rangeMiddle();
-//         @include circle( lightblue );
-//         z-index: -1;
-//     }
-//   }
-
-
-//   &.dirtyMark {
-
-//     position: relative;
-//     z-index: 3;
-
-//     &:before {
-//       @include dirtyMark();
-//       z-index: -1;
-//     }
-//   }
 
 }
 

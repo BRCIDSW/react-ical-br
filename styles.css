@@ -126,10 +126,12 @@
       margin: 0 !important;
       margin-top: 5% !important;
       z-index: 10;
-      border-top: 2px solid rgba(0, 0, 0, 0.5);
-      border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+      border-top-left-radius: weekSelectorCornerRadius;
+      border-bottom-left-radius: weekSelectorCornerRadius;
+      border-top: 2px solid red;
+      border-bottom: 2px solid red;
       border-right: hidden !important;
-      border-left: 2px solid rgba(0, 0, 0, 0.5); }
+      border-left: 2px solid red; }
   .Cal__Day__root.Cal__Day__rangeClose {
     position: relative;
     z-index: 3; }
@@ -145,10 +147,12 @@
       margin: 0 !important;
       margin-top: 5% !important;
       z-index: 10;
-      border-top: 2px solid rgba(0, 0, 0, 0.5);
-      border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+      border-top-right-radius: weekSelectorCornerRadius;
+      border-bottom-right-radius: weekSelectorCornerRadius;
+      border-top: 2px solid red;
+      border-bottom: 2px solid red;
       border-left: hidden !important;
-      border-right: 2px solid rgba(0, 0, 0, 0.5); }
+      border-right: 2px solid red; }
   .Cal__Day__root.Cal__Day__rangeMiddle {
     position: relative;
     z-index: 3; }
@@ -164,8 +168,8 @@
       margin: 0 !important;
       margin-top: 5% !important;
       z-index: 10;
-      border-top: 2px solid rgba(0, 0, 0, 0.5);
-      border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+      border-top: 2px solid red;
+      border-bottom: 2px solid red;
       border-right: hidden !important;
       border-left: hidden !important; }
   .Cal__Day__root.Cal__Day__dirtyMark {
