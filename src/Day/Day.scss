@@ -4,12 +4,12 @@ $circleReduction : 12px;
 
 $rangeHorzLineOffset : -4px;
 $weekSelectorThickness : 2px;
-$weekSelectorColor : red;
+$weekSelectorColor : rgba(255, 2, 2, 0.2);
 $weekSelectorCornerRadius : 15%;
 
 
-$weekSelectorHeight : 90%;
-$weekSelectorHeightMargin : 5%;
+$weekSelectorHeight : 80%;
+$weekSelectorHeightMargin : 10;
 
 
 $weekSelectorZindex : 10;
@@ -27,7 +27,7 @@ $todayZindex : -1;
   height: $weekSelectorHeight !important;
   border-radius: 0%;
 
-  border-color: rgba(black,10%);
+  //  border-color: rgba(black,10%);
   margin : 0 !important;
   margin-top : $weekSelectorHeightMargin !important;
 
@@ -40,8 +40,8 @@ $todayZindex : -1;
 @mixin rangeOpenPiece {
 
   @include rangeBase();
-  border-top-left-radius: weekSelectorCornerRadius;
-  border-bottom-left-radius: weekSelectorCornerRadius;
+  border-top-left-radius: $weekSelectorCornerRadius;
+  border-bottom-left-radius: $weekSelectorCornerRadius;
 
   
   border-top: $weekSelectorThickness solid $weekSelectorColor;
@@ -53,8 +53,8 @@ $todayZindex : -1;
 @mixin rangeClosePiece {
 
   @include rangeBase();
-  border-top-right-radius: weekSelectorCornerRadius;
-  border-bottom-right-radius: weekSelectorCornerRadius;
+  border-top-right-radius: $weekSelectorCornerRadius;
+  border-bottom-right-radius: $weekSelectorCornerRadius;
 
   border-top: $weekSelectorThickness solid $weekSelectorColor;
   border-bottom: $weekSelectorThickness solid $weekSelectorColor;
