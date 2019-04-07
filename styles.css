@@ -97,11 +97,11 @@
       border-color: black;
       margin: 0 !important;
       margin-top: 5% !important;
+      z-index: 10;
       border-top: 2px solid darkgray;
       border-bottom: 2px solid darkgray;
       border-right: hidden !important;
-      border-left: 2px solid darkgray;
-      z-index: -1; }
+      border-left: 2px solid darkgray; }
   .Cal__Day__root.Cal__Day__rangeClose {
     position: relative;
     z-index: 3; }
@@ -116,11 +116,11 @@
       border-color: black;
       margin: 0 !important;
       margin-top: 5% !important;
+      z-index: 10;
       border-top: 2px solid darkgray;
       border-bottom: 2px solid darkgray;
       border-left: hidden !important;
-      border-right: 2px solid darkgray;
-      z-index: -1; }
+      border-right: 2px solid darkgray; }
   .Cal__Day__root.Cal__Day__rangeMiddle {
     position: relative;
     z-index: 3; }
@@ -135,11 +135,11 @@
       border-color: black;
       margin: 0 !important;
       margin-top: 5% !important;
+      z-index: 10;
       border-top: 2px solid darkgray;
       border-bottom: 2px solid darkgray;
       border-right: hidden !important;
-      border-left: hidden !important;
-      z-index: -1; }
+      border-left: hidden !important; }
   .Cal__Day__root.Cal__Day__dirtyMark {
     position: relative;
     z-index: 3; }
