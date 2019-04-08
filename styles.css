@@ -62,10 +62,9 @@
     position: relative; }
   .Cal__Day__root.Cal__Day__today {
     position: relative;
-    z-index: 2;
-    color: yellow; }
+    z-index: 2; }
     .Cal__Day__root.Cal__Day__today > span {
-      color: limegreen; }
+      color: lightsalmon; }
     .Cal__Day__root.Cal__Day__today.Cal__Day__disabled > span {
       color: #AAA; }
   .Cal__Day__root.Cal__Day__selected {
@@ -173,6 +172,8 @@
       margin: 0 !important;
       margin-top: 7% !important;
       z-index: -1; }
+  .Cal__Day__root.Cal__Day__selectedInRange {
+    color: hotpink; }
 
 .Cal__Day__month, .Cal__Day__year {
   position: absolute;
@@ -183,14 +184,11 @@
   text-transform: capitalize; }
 
 .Cal__Day__month {
-  color: red;
+  color: lightseagreen;
   top: 5px; }
 
 .Cal__Day__year {
   bottom: 5px; }
-
-.Cal__Day__selectedInRange {
-  color: hotpink; }
 
 /*
  * Range selection styles
