@@ -145,12 +145,18 @@ $todayZindex : -1;
       z-index: 2;
 
       > span {
-          color : adjust-hue( $pen-biorad-green, 60deg);
+          color : $textColor
       }
 
       &.disabled > span {
           color: $textColorDisabled;
       }
+
+      &:after {
+        @include circle(yellow);
+        z-index: -1;
+      }
+    
 
       // &:before {
       // //    @include circle(yellow);
@@ -235,22 +241,6 @@ $todayZindex : -1;
     &:before {
       @include dirtyMark(); 
       z-index: -1;
-    }
-  }
-
-  &.selectedInRange {
-
-    position: relative;
-    z-index: 11;
-
-    > span {
-      color : darkmagenta;
-      background-color: whitesmoke;
-    }
-
-
-    &:after {
-      @include circle();
     }
   }
 
