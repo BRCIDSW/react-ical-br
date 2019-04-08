@@ -48,6 +48,9 @@ export default class Month extends PureComponent {
     const _maxSelectionDate = selectedRange && format(selectedRange.end,'YYYY-MM-DD');
 
 
+    console.log( "Month Render: " + monthShort );
+
+
 		// Oh the things we do in the name of performance...
     for (let i = 0, len = rows.length; i < len; i++) {
       row = rows[i];
