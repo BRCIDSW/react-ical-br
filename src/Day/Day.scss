@@ -165,9 +165,9 @@ $todayZindex : -1;
       position: relative;
       z-index: 2;
 
-      > span {
-          color : $textColor
-      }
+      // > span {
+      //     color : $textColor
+      // }
 
       &.disabled > span {
           color: $textColorDisabled;
