@@ -1,3 +1,31 @@
+/*  imported from Container.scss  */
+
+.Cal__Container__root {
+  position: relative;
+  display: table;
+  z-index: 1;
+  line-height: 1.4em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  outline: none;
+  text-align: left; }
+  .Cal__Container__root.Cal__Container__landscape {
+    display: flex;
+    flex-direction: row; }
+    .Cal__Container__root.Cal__Container__landscape .Cal__Container__wrapper {
+      position: relative;
+      flex-grow: 1;
+      overflow: hidden;
+      z-index: 1;
+      background: red;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
+
+.Cal__Container__listWrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #FFF; }
 /*
   imported from Day.scss 
  */
@@ -36,7 +64,7 @@
     position: relative;
     z-index: 2; }
     .Cal__Day__root.Cal__Day__today > span {
-      color: lightsalmon; }
+      color: yellow; }
     .Cal__Day__root.Cal__Day__today.Cal__Day__disabled > span {
       color: #AAA; }
   .Cal__Day__root.Cal__Day__selected {
@@ -147,6 +175,8 @@
   .Cal__Day__root.Cal__Day__selectedInRange {
     position: relative;
     z-index: 2; }
+    .Cal__Day__root.Cal__Day__selectedInRange > span {
+      color: darkmagenta; }
 
 .Cal__Day__month, .Cal__Day__year {
   position: absolute;

@@ -145,8 +145,7 @@ $todayZindex : -1;
       z-index: 2;
 
       > span {
-          // color: $textColor;
-          color : lightsalmon;
+          color : yellow;
       }
 
       &.disabled > span {
@@ -243,7 +242,12 @@ $todayZindex : -1;
 
     position: relative;
     z-index: 2;
-  
+
+    > span {
+      color : darkmagenta;
+    }
+
+
   }
 
 
