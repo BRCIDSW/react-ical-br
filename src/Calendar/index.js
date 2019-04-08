@@ -279,6 +279,7 @@ export default class Calendar extends Component {
       scrollDate,
       selected,
       selectedRange,        // BR/OPF
+      syncHack,             // BR/OPF
 			tabIndex,
 			width,
       YearsComponent,
@@ -367,6 +368,7 @@ export default class Calendar extends Component {
               selected={selected}
               selectedRange={selectedRange}         // BR/OPF
               scrollDate={scrollDate}
+              syncHack={syncHack}                   // BR/OPF
               showOverlay={showOverlay}
               width={width}
             />

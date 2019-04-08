@@ -23,6 +23,7 @@ export default class Month extends PureComponent {
       rows,
       selected,
       selectedRange,    // BR/OPF
+      syncHack,         // BR/OPF
       today,
       theme,
       passThrough,
@@ -94,6 +95,7 @@ export default class Month extends PureComponent {
 						locale={locale}
             month={month}
             monthShort={monthShort}
+            syncHack={syncHack}
 						theme={theme}
             year={year}
             {...passThrough.Day}

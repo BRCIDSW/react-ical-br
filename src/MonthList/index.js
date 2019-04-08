@@ -131,6 +131,7 @@ export default class MonthList extends Component {
       selected,
       selectedRange,      // BR/OPF
       showOverlay,
+      syncHack,           // BR/OPF
       theme,
       today,
     } = this.props;
@@ -158,6 +159,7 @@ export default class MonthList extends Component {
         today={today}
         theme={theme}
         style={style}
+        syncHack={syncHack}
         locale={locale}
         passThrough={passThrough}
         {...passThrough.Month}

@@ -47,7 +47,7 @@ export default class Day extends PureComponent {
       className,
       currentYear,
       date,
-      day,
+      day,      
       handlers,
       isInDirtyWeek,
       inSelectionRange,
@@ -56,6 +56,7 @@ export default class Day extends PureComponent {
       isToday,
       isSelected,
       monthShort,
+      syncHack,
       theme: {selectionColor, textColor, todayColor},
       year,
     } = this.props;
@@ -86,7 +87,7 @@ export default class Day extends PureComponent {
     var markDirty = isInDirtyWeek && dayOfWeek === 6;
 
 
-    console.log( "Day Render:  date = " + date + "    day = " + day );
+    console.log( "Day Render:  date = " + date + "    day = " + day + "   syncHack: " + syncHack);
 
 
     return (
