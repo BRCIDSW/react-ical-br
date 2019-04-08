@@ -77,7 +77,7 @@
       margin-top: -22px;
       margin-left: -22px;
       border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.05);
       z-index: -1; }
   .Cal__Day__root.Cal__Day__selected {
     position: relative; }
@@ -180,7 +180,7 @@
       border-top: hidden !important;
       border-bottom: hidden !important;
       border-left: hidden !important;
-      border-right: 4px solid red;
+      border-right: 2px solid red;
       margin: 0 !important;
       margin-top: 7% !important;
       z-index: -1; }

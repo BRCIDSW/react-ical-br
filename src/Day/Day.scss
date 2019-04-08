@@ -118,7 +118,7 @@ $todayZindex : -1;
   border-top: hidden !important;
   border-bottom: hidden !important;
   border-left : hidden !important;
-  border-right : 4px solid red;
+  border-right : 2px solid red;
 
   margin : 0 !important;
   margin-top : $weekSelectorHeightMargin !important;
@@ -174,7 +174,7 @@ $todayZindex : -1;
       }
 
       &:after {
-        @include circle(rgba(0,0,0,0.1));
+        @include circle(rgba(0,0,0,0.05));        
         z-index: -1;
       }
     
