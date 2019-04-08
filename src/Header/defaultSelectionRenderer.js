@@ -20,12 +20,12 @@ export default function defaultSelectionRenderer(value, {
   const values = date && [
     {
       active: display === 'years',
-      handleClick: e => {
-        onYearClick(date, e, key);
-        setDisplay('years');
-      },
+      // handleClick: e => {
+      //   onYearClick(date, e, key);
+      //   setDisplay('years');
+      // },
       item: 'year',
-      title: display === 'days' ? `Change year` : null,
+      title: null,         // display === 'days' ? `Change year` : null,
       value: date.getFullYear(),
     },
     {
