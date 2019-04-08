@@ -49,7 +49,7 @@ export default class Month extends PureComponent {
     const _maxSelectionDate = selectedRange && format(selectedRange.end,'YYYY-MM-DD');
 
 
-    console.log( "Month Render: " + monthShort );
+    // console.log( "Month Render: " + monthShort );
 
 
 		// Oh the things we do in the name of performance...
@@ -78,7 +78,7 @@ export default class Month extends PureComponent {
         inSelectionRange = _minSelectionDate && (_minSelectionDate <= date && date <= _maxSelectionDate); 
         isInDirtyWeek = isDateInWeeks(thisDay, dirtyWeeks);
 
-        console.log( "Month Render: iter: " + date +  "  inSelectionRange:" + inSelectionRange + "  isInDirtyWeek: " +isInDirtyWeek );
+        // console.log( "Month Render: iter: " + date +  "  inSelectionRange:" + inSelectionRange + "  isInDirtyWeek: " +isInDirtyWeek );
 
 
         days[k] = (
