@@ -81,8 +81,34 @@ $todayZindex : -1;
   margin-top: -0.5 * ($rowHeight - $circleReduction);
   margin-left: -0.5 * ($rowHeight - $circleReduction);
   border-radius: 50%;
-  background-color: $fillColor;
+  // background-color: $fillColor;
+  color : $fillColor;
 }
+
+
+
+@mixin circle2( $color : black, $fillColor ) {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $rowHeight - $circleReduction;
+  height: $rowHeight - $circleReduction;
+  margin-top: -0.5 * ($rowHeight - $circleReduction);
+  margin-left: -0.5 * ($rowHeight - $circleReduction);
+  border-radius: 50%;
+
+
+  color : $color;
+
+  @if( $fillColor )
+  {
+    $background-color : $fillColor;
+  }
+
+}
+
+
 
 @mixin dirtyMark 
 {
@@ -153,7 +179,7 @@ $todayZindex : -1;
       }
 
       &:after {
-        @include circle(yellow);
+        @include circle2(yellow);
         z-index: -1;
       }
     

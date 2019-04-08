@@ -13,34 +13,34 @@ export default class Day extends PureComponent {
     }
   };
 
-  renderSelection(selectionColor) {
-    const {
-      day,
-      date,
-      isToday,
-      locale: {todayLabel},
-      monthShort,
-      theme: {textColor},
-      selectionStyle,
-    } = this.props;
+  // renderSelection(selectionColor) {
+  //   const {
+  //     day,
+  //     date,
+  //     isToday,
+  //     locale: {todayLabel},
+  //     monthShort,
+  //     theme: {textColor},
+  //     selectionStyle,
+  //   } = this.props;
 
-    return (
-      <div
-        className={styles.selection}
-        data-date={date}
-        style={{
-          backgroundColor: this.selectionColor,
-          color: textColor.active,
-          ...selectionStyle,
-        }}
-      >
-        <span className={styles.month}>
-          {isToday ? todayLabel.short || todayLabel.long : monthShort}
-        </span>
-        <span className={styles.day}>{day}</span>
-      </div>
-    );
-  }
+  //   return (
+  //     <div
+  //       className={styles.selection}
+  //       data-date={date}
+  //       style={{
+  //         backgroundColor: this.selectionColor,
+  //         color: textColor.active,
+  //         ...selectionStyle,
+  //       }}
+  //     >
+  //       <span className={styles.month}>
+  //         {isToday ? todayLabel.short || todayLabel.long : monthShort}
+  //       </span>
+  //       <span className={styles.day}>{day}</span>
+  //     </div>
+  //   );
+  // }
   
   render() {
     const {
@@ -61,11 +61,13 @@ export default class Day extends PureComponent {
     } = this.props;
     let color;
 
-    if (isSelected) {
-      color = this.selectionColor = typeof selectionColor === 'function'
-        ? selectionColor(date)
-        : selectionColor;
-    } else if (isToday) {
+    // if (isSelected) {
+    //   color = this.selectionColor = typeof selectionColor === 'function'
+    //     ? selectionColor(date)
+    //     : selectionColor;
+    // } else 
+    
+    if (isToday) {
       color = todayColor;
     }
     else if(textColor) {
