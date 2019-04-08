@@ -83,6 +83,12 @@ export default class Day extends PureComponent {
     // mark each sunday of a dirty week 
     var markDirty = isInDirtyWeek && dayOfWeek === 6;
 
+    if( isSelectionEnd )
+    {
+      console.log( "today: " + isToday + "  high: " + isHighlighted + "  selected: " + (isSelected && !inSelectionRange) + "  inSelectionRange: " + (isSelected && inSelectionRange) + "  disable: " + isDisabled + "  enabled: " + (!(isDisabled || inSelectionRange)) ); 
+    }
+
+
     return (
       <li
         style={color ? {color} : null}
