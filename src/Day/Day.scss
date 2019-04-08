@@ -81,8 +81,8 @@ $todayZindex : -1;
   margin-top: -0.5 * ($rowHeight - $circleReduction);
   margin-left: -0.5 * ($rowHeight - $circleReduction);
   border-radius: 50%;
-  // background-color: $fillColor;
-  color : $fillColor;
+  background-color: $fillColor;
+  
 }
 
 
@@ -98,7 +98,8 @@ $todayZindex : -1;
   margin-left: -0.5 * ($rowHeight - $circleReduction);
   border-radius: 50%;
 
-  color : $color;
+
+  border-color : $color;
 
 }
 

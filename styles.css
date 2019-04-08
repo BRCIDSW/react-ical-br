@@ -52,7 +52,7 @@
       margin-top: -22px;
       margin-left: -22px;
       border-radius: 50%;
-      color: #d6d6d6;
+      background-color: #d6d6d6;
       z-index: -1; }
   .Cal__Day__root.Cal__Day__enabled:hover:before {
     opacity: 0.25; }
@@ -77,7 +77,7 @@
       margin-top: -22px;
       margin-left: -22px;
       border-radius: 50%;
-      color: yellow;
+      border-color: yellow;
       z-index: -1; }
   .Cal__Day__root.Cal__Day__selected {
     position: relative; }
@@ -95,7 +95,7 @@
       margin-top: -22px;
       margin-left: -22px;
       border-radius: 50%;
-      color: hotpink;
+      background-color: hotpink;
       line-height: 56px;
       z-index: 2; }
       .Cal__Day__root.Cal__Day__selected .Cal__Day__selection .Cal__Day__month {
