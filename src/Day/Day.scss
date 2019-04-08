@@ -146,7 +146,8 @@ $todayZindex : -1;
       color : yellow;
 
       > span {
-          color: $textColor;
+          // color: $textColor;
+          color : limegreen;
       }
 
       &.disabled > span {

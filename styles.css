@@ -65,7 +65,7 @@
     z-index: 2;
     color: yellow; }
     .Cal__Day__root.Cal__Day__today > span {
-      color: #3d3d3d; }
+      color: limegreen; }
     .Cal__Day__root.Cal__Day__today.Cal__Day__disabled > span {
       color: #AAA; }
   .Cal__Day__root.Cal__Day__selected {
