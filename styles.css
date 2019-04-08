@@ -178,7 +178,7 @@
     .Cal__Day__root.Cal__Day__selectedInRange > span {
       color: darkmagenta;
       background-color: whitesmoke; }
-    .Cal__Day__root.Cal__Day__selectedInRange:before {
+    .Cal__Day__root.Cal__Day__selectedInRange:after {
       content: '';
       position: absolute;
       top: 50%;

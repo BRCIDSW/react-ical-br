@@ -249,7 +249,7 @@ $todayZindex : -1;
     }
 
 
-    &:before {
+    &:after {
       @include circle();
     }
   }
