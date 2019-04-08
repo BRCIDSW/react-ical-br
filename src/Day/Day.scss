@@ -87,7 +87,7 @@ $todayZindex : -1;
 
 
 
-@mixin circle2( $color : black, $fillColor ) {
+@mixin circle2( $color : black ) {
   content: '';
   position: absolute;
   top: 50%;
@@ -98,13 +98,7 @@ $todayZindex : -1;
   margin-left: -0.5 * ($rowHeight - $circleReduction);
   border-radius: 50%;
 
-
   color : $color;
-
-  @if( $fillColor )
-  {
-    $background-color : $fillColor;
-  }
 
 }
 
