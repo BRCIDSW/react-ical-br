@@ -77,6 +77,9 @@ export default class Month extends PureComponent {
         inSelectionRange = _minSelectionDate && (_minSelectionDate <= date && date <= _maxSelectionDate); 
         isInDirtyWeek = isDateInWeeks(thisDay, dirtyWeeks);
 
+        console.log( "Month Render: iter: " + date +  "  inSelectionRange:" + inSelectionRange + "  isInDirtyWeek: " +isInDirtyWeek );
+
+
         days[k] = (
 					<DayComponent
 						key={`day-${day}`}
