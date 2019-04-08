@@ -34,7 +34,8 @@
     position: relative; }
   .Cal__Day__root.Cal__Day__today {
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    color: yellow; }
     .Cal__Day__root.Cal__Day__today > span {
       color: #3d3d3d; }
     .Cal__Day__root.Cal__Day__today.Cal__Day__disabled > span {
@@ -154,10 +155,14 @@
   text-transform: capitalize; }
 
 .Cal__Day__month {
+  color: red;
   top: 5px; }
 
 .Cal__Day__year {
   bottom: 5px; }
+
+.Cal__Day__selectedInRange {
+  color: hotpink; }
 
 /*
  * Range selection styles

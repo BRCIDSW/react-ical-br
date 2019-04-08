@@ -143,6 +143,7 @@ $todayZindex : -1;
   &.today {
       position: relative;
       z-index: 2;
+      color : yellow;
 
       > span {
           color: $textColor;
@@ -251,12 +252,18 @@ $todayZindex : -1;
 }
 
 .month {
+  color: red;
   top: 5px;
 }
 
 .year {
   bottom: 5px;
 }
+
+.selectedInRange {
+  color : hotpink;
+}
+
 
 
 /*
